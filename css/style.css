@@ -317,7 +317,7 @@ em, i {
 }
 
 .home h1 {
-    font-size: 30px;
+    font-size: 50px;
     letter-spacing: -1px;
     color: #222;
     font-weight: bold;
@@ -784,13 +784,13 @@ h2.month {
         padding-top: 40px;
     }
     h1 {
-        font-size: 26px;
+        font-size: 50px;
     }
     .post h2.headline {
         font-size: 13px;
     }
     .post h1 {
-        font-size: 24px;
+        font-size: 50px;
     }
     .post h2 {
         font-size: 20px;
