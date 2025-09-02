@@ -64,6 +64,76 @@
     border: 2px dashed #333;
 }
 
+/* Specific avatar image for Saketh */
+.avatar.saketh {
+    background-image: url('../images/sakethCrop.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0;
+}
+
+/* Specific avatar image for Teja */
+.avatar.teja {
+    background-image: url('../images/TejaCrop.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0;
+}
+
+/* Specific avatar image for John */
+.avatar.john {
+    background-image: url('../images/johnCrop.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0;
+}
+
+/* Specific avatar for Caleb with pastel blue background and white C */
+.avatar.caleb {
+    background-color: #87CEEB;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 48px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    border: 0;
+}
+
+.avatar.caleb::before {
+    content: "CJ";
+}
+
+/* Specific avatar image for Txaber */
+.avatar.txaber {
+    background-image: url('../images/TxaberTrevino.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0;
+}
+
+/* Specific avatar for Sean with pastel blue background and white SS */
+.avatar.sean {
+    background-color: #87CEEB;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    border: 0;
+}
+
+.avatar.sean::before {
+    content: "SS";
+}
+
 .role-badge {
     display: inline-block;
     padding: 4px 10px;
