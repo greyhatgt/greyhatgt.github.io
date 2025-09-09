@@ -134,6 +134,57 @@
     content: "SS";
 }
 
+/* Specific avatar for Darshan with pastel blue background and white DS */
+.avatar.darshan {
+    background-color: #87CEEB;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    border: 0;
+}
+
+.avatar.darshan::before {
+    content: "DS";
+}
+
+/* Specific avatar for Eden with pastel blue background and white EP */
+.avatar.eden {
+    background-color: #87CEEB;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    border: 0;
+}
+
+.avatar.eden::before {
+    content: "EP";
+}
+
+/* Specific avatar for TangWei with pastel blue background and white TW */
+.avatar.tangwei {
+    background-color: #87CEEB;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    border: 0;
+}
+
+.avatar.tangwei::before {
+    content: "TW";
+}
+
 .role-badge {
     display: inline-block;
     padding: 4px 10px;
