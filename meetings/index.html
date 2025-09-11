@@ -10,20 +10,27 @@
   <link rel="stylesheet" href="../css/theme-dark.css">
   <link rel="stylesheet" href="../css/meetings.css">
   <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/mobile.css">
 </head>
 <body>
   <nav class="main-nav">
     <div class="brand">
       <span>GreyHat @ GT</span>
     </div>
-    <div class="nav-links">
-      <a href="/">Home</a>
-      <a href="/meetings">Meetings</a>
-      <a href="/sponsors">Sponsors</a>
-      <a href="/team">Team</a>
-      <a href="/publications">Publications</a>
-      <a class="cta" href="https://discord.gg/wQWyKpGNpC">Join Discord</a>
-    </div>
+    <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav-links" id="nav-links">
+        <a href="/">Home</a>
+        <a href="/meetings">Meetings</a>
+        <a href="/sponsors">Sponsors</a>
+        <a href="/team">Team</a>
+        <a href="/publications">Publications</a>
+        <a class="cta" href="https://discord.gg/wQWyKpGNpC">Join Discord</a>
+      </div>
+    <div class="mobile-overlay" id="mobile-overlay"></div>
   </nav>
   <div class="meetings-hero">
     <div class="meetings-title">Meetings</div>
@@ -66,5 +73,40 @@
       Powered by <a href="https://hexo.io/">Hexo</a> | Theme By <a href="https://github.com/fuzhouxxdong/hexo-theme-dxx">Dxx</a>
     </p>
   </footer>
+
+  <script>
+    // Mobile menu functionality
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    const mobileOverlay = document.getElementById('mobile-overlay');
+
+    function toggleMobileMenu() {
+      mobileMenuToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+      mobileOverlay.classList.toggle('active');
+    }
+
+    function closeMobileMenu() {
+      mobileMenuToggle.classList.remove('active');
+      navLinks.classList.remove('active');
+      mobileOverlay.classList.remove('active');
+    }
+
+    mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+    mobileOverlay.addEventListener('click', closeMobileMenu);
+
+    // Close menu when clicking on nav links
+    const navLinkElements = navLinks.querySelectorAll('a');
+    navLinkElements.forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    // Close menu on escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeMobileMenu();
+      }
+    });
+  </script>
 </body>
 </html>

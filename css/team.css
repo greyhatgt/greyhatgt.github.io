@@ -185,6 +185,15 @@
     content: "TW";
 }
 
+/* Specific avatar image for Purvi */
+.avatar.purvi {
+    background-image: url('../images/PurviKathalkar.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0;
+}
+
 .role-badge {
     display: inline-block;
     padding: 4px 10px;
@@ -212,4 +221,54 @@
 .member-bio {
     margin-top: 12px;
     color: #d1d5db;
+}
+
+.member-links {
+    margin-top: 16px;
+    display: flex;
+    gap: 12px;
+}
+
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: #262626;
+    border-radius: 8px;
+    color: #9ca3af;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: #06b6d4;
+    color: #ffffff;
+    transform: translateY(-2px);
+}
+
+.discord-link {
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 12px;
+    width: auto;
+    min-width: 120px;
+}
+
+.discord-link svg {
+    width: 24px;
+    height: 24px;
+}
+
+.discord-link:hover {
+    background: #5865f2;
+    color: #ffffff;
+}
+
+.discord-tag {
+    font-size: 14px;
+    font-weight: 500;
+    color: inherit;
 }
