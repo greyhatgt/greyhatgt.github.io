@@ -194,6 +194,31 @@
     border: 0;
 }
 
+/* Specific avatar image for Riya */
+.avatar.riya {
+    background-image: url('../images/RiyaCrop.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0;
+}
+
+.avatar.carter {
+    background-color: #87CEEB;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    border: 0;
+}
+
+.avatar.carter::before {
+    content: "CP";
+}
+
 .role-badge {
     display: inline-block;
     padding: 4px 10px;
