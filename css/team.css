@@ -186,6 +186,15 @@
 }
 
 /* Specific avatar image for Purvi */
+.avatar.nash {
+    background-image: url('https://nashpillai.com/headshot');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0;
+}
+
+/* Specific avatar image for Purvi */
 .avatar.purvi {
     background-image: url('../images/PurviKathalkar.png');
     background-size: cover;
