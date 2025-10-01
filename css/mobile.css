@@ -1,0 +1,242 @@
+/* Mobile Responsive Styles */
+
+/* Mobile Navigation */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    padding: 8px;
+    background: none;
+    border: none;
+    z-index: 1001;
+}
+
+.mobile-menu-toggle span {
+    width: 25px;
+    height: 3px;
+    background: #ffffff;
+    margin: 3px 0;
+    transition: 0.3s;
+    border-radius: 2px;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+.main-nav {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 20px;
+    background: #0f0f10;
+    border-bottom: 1px solid #262626;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.nav-links a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #06b6d4;
+}
+
+.nav-links .cta {
+    background: #06b6d4;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    transition: background 0.3s ease;
+}
+
+.nav-links .cta:hover {
+    background: #0891b2;
+    color: #ffffff;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .mobile-menu-toggle {
+        display: flex;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: #0f0f10;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 80px 0 0 0;
+        transition: right 0.3s ease;
+        z-index: 1000;
+        border-left: 1px solid #262626;
+        box-shadow: -4px 0 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 16px 24px;
+        border-bottom: 1px solid #262626;
+        font-size: 16px;
+    }
+
+    .nav-links .cta {
+        margin: 16px 24px;
+        text-align: center;
+        border-radius: 8px;
+    }
+
+    .main-nav {
+        padding: 12px 16px;
+    }
+
+    .brand span {
+        font-size: 18px;
+    }
+}
+
+/* Mobile Overlay */
+.mobile-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 999;
+}
+
+.mobile-overlay.active {
+    display: block;
+}
+
+/* Responsive Grid Adjustments */
+@media (max-width: 768px) {
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 0 16px;
+    }
+
+    .publications-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 20px 16px;
+    }
+
+    .member-card {
+        margin: 0;
+    }
+
+    .publication-card {
+        margin: 0;
+    }
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+    .publications-title {
+        font-size: 48px;
+    }
+
+    .publications-subtitle {
+        font-size: 16px;
+        padding: 0 20px;
+    }
+
+    .team-hero h1 {
+        font-size: 32px;
+    }
+
+    .who-card h1 {
+        font-size: 32px;
+    }
+
+    .section-title {
+        font-size: 24px;
+    }
+}
+
+/* Responsive Spacing */
+@media (max-width: 768px) {
+    .team-hero {
+        padding: 40px 16px 30px 16px;
+    }
+
+    .publications-hero {
+        padding: 60px 0 40px 0;
+    }
+
+    .section {
+        padding: 0 16px;
+        margin: 16px auto 24px auto;
+    }
+}
+
+/* Responsive Member Cards */
+@media (max-width: 768px) {
+    .member-header {
+        grid-template-columns: 80px 1fr;
+        gap: 12px;
+    }
+
+    .avatar {
+        width: 80px;
+        height: 80px;
+    }
+
+    .member-name {
+        font-size: 18px;
+    }
+
+    .member-bio {
+        font-size: 14px;
+    }
+}
+
+/* Responsive Publication Cards */
+@media (max-width: 768px) {
+    .publication-cover {
+        height: 160px;
+    }
+
+    .publication-icon {
+        font-size: 36px;
+    }
+
+    .publication-title {
+        font-size: 18px;
+    }
+
+    .publication-description {
+        font-size: 13px;
+    }
+}
