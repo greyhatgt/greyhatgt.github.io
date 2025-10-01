@@ -12,11 +12,157 @@
     <link rel="stylesheet" href="font-awesome.min.css">
     <link rel="stylesheet" href="/mobile.css">
 
-    <link rel="stylesheet" href="../css/style.min.css">
-    <link rel="stylesheet" href="../css/theme-dark.css">
-    <link rel="stylesheet" href="../css/sponsors.css">
-    <link rel="stylesheet" href="../css/font-awesome.min.css">
-    <link rel="stylesheet" href="../css/mobile.css">
+  <link rel="stylesheet" href="../css/style.min.css">
+  <link rel="stylesheet" href="../css/theme-dark.css">
+  <link rel="stylesheet" href="../css/sponsors.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/mobile.css">
+  <style>
+    .sponsor-options-wrapper {
+      background: #0f0f10;
+      border: 1px solid #262626;
+      border-radius: 16px;
+      padding: 24px;
+      margin: 24px 0;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    .sponsor-options-title {
+      font-size: 24px;
+      font-weight: 700;
+      color: #ffffff;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+    
+    .sponsor-options-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    .sponsor-options-row {
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 16px;
+      padding: 12px 0;
+      border-bottom: 1px solid #262626;
+    }
+    
+    .sponsor-options-row:last-child {
+      border-bottom: none;
+    }
+    
+    .sponsor-options-header {
+      background: #1a1a1b;
+      border-radius: 8px;
+      padding: 16px;
+      font-weight: 700;
+      color: #06b6d4;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-size: 14px;
+    }
+    
+    .sponsor-options-cell {
+      color: #d1d5db;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+    }
+    
+    .sponsor-options-checkmark {
+      color: #10b981;
+      font-weight: 700;
+      font-size: 18px;
+      justify-content: center;
+      text-align: center;
+    }
+    
+    .sponsor-options-row.ctf-tiers .sponsor-options-cell:not(:first-child) {
+      justify-content: center;
+      text-align: center;
+    }
+    
+    .sponsor-options-row .sponsor-options-cell:nth-child(4) {
+      justify-content: center;
+      text-align: center;
+    }
+    
+    .club-sponsor-description {
+      background: #1a1a1b;
+      border-radius: 8px;
+      padding: 20px;
+      color: #d1d5db;
+      font-size: 16px;
+      line-height: 1.6;
+      margin: 16px 0;
+    }
+    
+    .club-sponsor-description strong {
+      color: #06b6d4;
+      font-weight: 700;
+    }
+    
+    .sponsor-table {
+      margin: 0;
+    }
+    
+    .sponsor-options-row.ctf-tiers {
+      grid-template-columns: 2fr 1fr 1fr;
+    }
+    
+    .sponsor-options-row.ctf-tiers .sponsor-options-cell:first-child {
+      font-weight: 700;
+      color: #ffffff;
+    }
+    
+    .cost-cell {
+      font-weight: 700;
+      color: #06b6d4;
+      font-size: 18px;
+    }
+    
+    .tier-cell {
+      font-weight: 700;
+      color: #f59e0b;
+      text-align: center;
+    }
+    
+    .sponsor-note {
+      background: #1a1a1b;
+      border-left: 4px solid #f59e0b;
+      padding: 16px 20px;
+      margin: 16px 0;
+      border-radius: 0 8px 8px 0;
+      color: #d1d5db;
+      font-style: italic;
+    }
+    
+    .sponsor-note strong {
+      color: #f59e0b;
+    }
+    
+    @media (max-width: 768px) {
+      .sponsor-options-row {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        text-align: center;
+      }
+      
+      .sponsor-options-row.ctf-tiers {
+        grid-template-columns: 1fr;
+      }
+      
+      .sponsor-options-cell {
+        padding: 8px 0;
+        border-bottom: 1px solid #333;
+      }
+      
+      .sponsor-options-cell:last-child {
+        border-bottom: none;
+      }
+    }
+  </style>
 </head>
 <body>
 <nav class="main-nav">
@@ -84,16 +230,16 @@
 
                 <div class="sponsor-options-row">
                     <div class="sponsor-options-cell">Chat</div>
-                    <div class="sponsor-options-cell">$1,000</div>
+                    <div class="sponsor-options-cell cost-cell">$1,000</div>
                     <div class="sponsor-options-cell">30 min</div>
-                    <div class="sponsor-options-cell"></div>
+                    <div class="sponsor-options-cell">—</div>
                 </div>
 
                 <div class="sponsor-options-row">
                     <div class="sponsor-options-cell">Workshop</div>
-                    <div class="sponsor-options-cell">$2,500</div>
+                    <div class="sponsor-options-cell cost-cell">$2,500</div>
                     <div class="sponsor-options-cell">1 hr+</div>
-                    <div class="sponsor-options-cell sponsor-options-checkmark">&#10003;</div>
+                    <div class="sponsor-options-cell sponsor-options-checkmark">✓</div>
                 </div>
             </div>
         </div>
@@ -111,12 +257,12 @@
 
                     <div class="sponsor-options-row">
                         <div class="sponsor-options-cell">Resume Book of Students</div>
-                        <div class="sponsor-options-cell">$500</div>
+                        <div class="sponsor-options-cell cost-cell">$500</div>
                     </div>
 
                     <div class="sponsor-options-row">
                         <div class="sponsor-options-cell">Active Recruiting Info Distribution</div>
-                        <div class="sponsor-options-cell">$1,000</div>
+                        <div class="sponsor-options-cell cost-cell">$1,000</div>
                     </div>
                 </div>
             </div>
@@ -125,10 +271,13 @@
         <div class="sponsor-options-wrapper">
             <div class="sponsor-table">
                 <div class="sponsor-options-title">Club Sponsor</div>
-                <div class="club-sponsor-description">• Logo Featured on T-Shirt •<br>
-                    • 25% off Workshop & CTF Sponsorship Packages •<br>
-                    • Resume Book of Competitors & Organizers •<br>
-                    • Website Placements & Social Media Shoutouts • <br>• Cost: $1,500 •</div>
+                <div class="club-sponsor-description">
+                    <strong>Cost: $1,500</strong><br><br>
+                    • Logo Featured on T-Shirt<br>
+                    • 25% off Workshop & CTF Sponsorship Packages<br>
+                    • Resume Book of Competitors & Organizers<br>
+                    • Website Placements & Social Media Shoutouts
+                </div>
             </div>
         </div>
 
@@ -138,38 +287,40 @@
             <div class="sponsor-table">
                 <div class="sponsor-options-title">WreckCTF 2025</div>
 
-                <div class="sponsor-options-row sponsor-options-header">
+                <div class="sponsor-options-row sponsor-options-header ctf-tiers">
                     <div class="sponsor-options-cell">Wreck CTF Sponsor Tiers</div>
-                    <div class="sponsor-options-cell">Tier 1</div>
-                    <div class="sponsor-options-cell">TIer 2</div>
+                    <div class="sponsor-options-cell tier-cell">Tier 1</div>
+                    <div class="sponsor-options-cell tier-cell">Tier 2</div>
                 </div>
 
-                <div class="sponsor-options-row">
+                <div class="sponsor-options-row ctf-tiers">
                     <div class="sponsor-options-cell">Cost</div>
-                    <div class="sponsor-options-cell">$1,000</div>
-                    <div class="sponsor-options-cell">$3,000</div>
+                    <div class="sponsor-options-cell cost-cell">$1,000</div>
+                    <div class="sponsor-options-cell cost-cell">$3,000</div>
                 </div>
 
-                <div class="sponsor-options-row">
+                <div class="sponsor-options-row ctf-tiers">
                     <div class="sponsor-options-cell">Website Placements & Social Media Shoutouts</div>
-                    <div class="sponsor-options-cell sponsor-options-checkmark">&#10003;</div>
-                    <div class="sponsor-options-cell sponsor-options-checkmark">&#10003;</div>
+                    <div class="sponsor-options-cell sponsor-options-checkmark">✓</div>
+                    <div class="sponsor-options-cell sponsor-options-checkmark">✓</div>
                 </div>
 
-                <div class="sponsor-options-row">
+                <div class="sponsor-options-row ctf-tiers">
                     <div class="sponsor-options-cell">Logo Featured on T-Shirt</div>
-                    <div class="sponsor-options-cell sponsor-options-checkmark">&#10003;</div>
-                    <div class="sponsor-options-cell sponsor-options-checkmark">&#10003;</div>
+                    <div class="sponsor-options-cell">—</div>
+                    <div class="sponsor-options-cell sponsor-options-checkmark">✓</div>
                 </div>
 
-                <div class="sponsor-options-row">
+                <div class="sponsor-options-row ctf-tiers">
                     <div class="sponsor-options-cell">Resume Book of Competitors & Organizers</div>
-                    <div class="sponsor-options-cell sponsor-options-checkmark">&#10003;</div>
-                    <div class="sponsor-options-cell"></div>
+                    <div class="sponsor-options-cell">—</div>
+                    <div class="sponsor-options-cell sponsor-options-checkmark">✓</div>
                 </div>
             </div>
         </div>
-        <p></p><p>*Tier 2: includes 50% discount on CTF Itemized Options</p><p></p>
+        <div class="sponsor-note">
+            <strong>Note:</strong> Tier 2 includes 50% discount on CTF Itemized Options
+        </div>
         <div class="sponsor-options-wrapper">
             <div class="sponsor-table">
                 <div class="sponsor-options-title">CTF Itemized Options</div>
@@ -181,13 +332,13 @@
 
                     <div class="sponsor-options-row">
                         <div class="sponsor-options-cell">Distribution of Company Recruitment Info during CTF</div>
-                        <div class="sponsor-options-cell">$1,000</div>
+                        <div class="sponsor-options-cell cost-cell">$1,000</div>
                     </div>
 
                     <div class="sponsor-options-row">
-                        <div class="sponsor-options-cell">Company-sponsored CTF Challenge
-                            (includes info of members who solved your challenge)</div>
-                        <div class="sponsor-options-cell">$2,000</div>
+                        <div class="sponsor-options-cell">Company-sponsored CTF Challenge<br>
+                            <small style="color: #9ca3af; font-size: 14px;">(includes info of members who solved your challenge)</small></div>
+                        <div class="sponsor-options-cell cost-cell">$2,000</div>
                     </div>
                 </div>
             </div>
@@ -238,3 +389,4 @@
 </script>
 </body>
 </html>
+
