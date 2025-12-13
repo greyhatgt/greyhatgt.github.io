@@ -68,13 +68,14 @@
     </article>
   </section>
   <footer id="footer">
-    <p class="small">© Copyright 2020 Greyhat &nbsp;</p>
+    <p class="small">© Copyright <span id="copyright-year"></span> Greyhat &nbsp;</p>
     <p class="small">Powered by &nbsp;<a href=
     "https://hexo.io/">Hexo &nbsp;</a>Theme By &nbsp;<a href=
     "https://github.com/fuzhouxxdong/hexo-theme-dxx">Dxx</a></p>
   </footer>
   <script>
   hljs.initHighlightingOnLoad();
+  document.getElementById('copyright-year').textContent = new Date().getFullYear();  
   </script>
 </body>
 </html>
