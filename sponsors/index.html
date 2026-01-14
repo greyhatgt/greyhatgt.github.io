@@ -143,23 +143,83 @@
     }
     
     @media (max-width: 768px) {
-      .sponsor-options-row {
-        grid-template-columns: 1fr;
-        gap: 8px;
-        text-align: center;
+      .sponsor-options-wrapper {
+        padding: 16px;
+        margin: 16px 0;
       }
       
-      .sponsor-options-row.ctf-tiers {
-        grid-template-columns: 1fr;
+      .sponsor-options-title {
+        font-size: 20px;
+        margin-bottom: 16px;
+      }
+      
+      .sponsor-options-row {
+        display: block;
+        border: 1px solid #333;
+        border-radius: 8px;
+        margin-bottom: 12px;
+        padding: 16px;
+        background: #1a1a1b;
+      }
+      
+      .sponsor-options-row.sponsor-options-header {
+        background: #262626;
+        font-weight: 700;
+        color: #06b6d4;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+        font-size: 12px;
       }
       
       .sponsor-options-cell {
+        display: block;
         padding: 8px 0;
         border-bottom: 1px solid #333;
+        text-align: left;
+        justify-content: flex-start;
       }
       
       .sponsor-options-cell:last-child {
         border-bottom: none;
+      }
+      
+      .sponsor-options-cell:before {
+        content: attr(data-label);
+        font-weight: 700;
+        color: #06b6d4;
+        display: block;
+        margin-bottom: 4px;
+        font-size: 12px;
+        text-transform: uppercase;
+        letter-spacing: 0.5px;
+      }
+      
+      .sponsor-options-row.sponsor-options-header .sponsor-options-cell:before {
+        display: none;
+      }
+      
+      .sponsor-options-row.ctf-tiers {
+        display: block;
+      }
+      
+      .sponsor-options-row.ctf-tiers .sponsor-options-cell:not(:first-child) {
+        text-align: left;
+        justify-content: flex-start;
+      }
+      
+      .sponsor-options-row .sponsor-options-cell:nth-child(4) {
+        text-align: left;
+        justify-content: flex-start;
+      }
+      
+      .club-sponsor-description {
+        padding: 16px;
+        font-size: 14px;
+      }
+      
+      .sponsor-note {
+        padding: 12px 16px;
+        font-size: 14px;
       }
     }
   </style>
@@ -226,20 +286,21 @@
                     <div class="sponsor-options-cell">Cost</div>
                     <div class="sponsor-options-cell">Duration</div>
                     <div class="sponsor-options-cell">Food</div>
+
                 </div>
 
                 <div class="sponsor-options-row">
-                    <div class="sponsor-options-cell">Chat</div>
-                    <div class="sponsor-options-cell cost-cell">$1,000</div>
-                    <div class="sponsor-options-cell">30 min</div>
-                    <div class="sponsor-options-cell">—</div>
+                    <div class="sponsor-options-cell" data-label="Option">Chat</div>
+                    <div class="sponsor-options-cell cost-cell" data-label="Cost">$1,000</div>
+                    <div class="sponsor-options-cell" data-label="Duration">30 min</div>
+                    <div class="sponsor-options-cell" data-label="Food">—</div>
                 </div>
 
                 <div class="sponsor-options-row">
-                    <div class="sponsor-options-cell">Workshop</div>
-                    <div class="sponsor-options-cell cost-cell">$2,500</div>
-                    <div class="sponsor-options-cell">1 hr+</div>
-                    <div class="sponsor-options-cell sponsor-options-checkmark">✓</div>
+                    <div class="sponsor-options-cell" data-label="Option">Workshop</div>
+                    <div class="sponsor-options-cell cost-cell" data-label="Cost">$2,500</div>
+                    <div class="sponsor-options-cell" data-label="Duration">1 hr+</div>
+                    <div class="sponsor-options-cell sponsor-options-checkmark" data-label="Food">✓</div>
                 </div>
             </div>
         </div>
@@ -256,13 +317,13 @@
                     </div>
 
                     <div class="sponsor-options-row">
-                        <div class="sponsor-options-cell">Resume Book of Students</div>
-                        <div class="sponsor-options-cell cost-cell">$500</div>
+                        <div class="sponsor-options-cell" data-label="Option">Resume Book of Students</div>
+                        <div class="sponsor-options-cell cost-cell" data-label="Cost">$500</div>
                     </div>
 
                     <div class="sponsor-options-row">
-                        <div class="sponsor-options-cell">Active Recruiting Info Distribution</div>
-                        <div class="sponsor-options-cell cost-cell">$1,000</div>
+                        <div class="sponsor-options-cell" data-label="Option">Active Recruiting Info Distribution</div>
+                        <div class="sponsor-options-cell cost-cell" data-label="Cost">$1,000</div>
                     </div>
                 </div>
             </div>
@@ -294,27 +355,27 @@
                 </div>
 
                 <div class="sponsor-options-row ctf-tiers">
-                    <div class="sponsor-options-cell">Cost</div>
-                    <div class="sponsor-options-cell cost-cell">$1,000</div>
-                    <div class="sponsor-options-cell cost-cell">$3,000</div>
+                    <div class="sponsor-options-cell" data-label="Feature">Cost</div>
+                    <div class="sponsor-options-cell cost-cell" data-label="Tier 1">$1,000</div>
+                    <div class="sponsor-options-cell cost-cell" data-label="Tier 2">$3,000</div>
                 </div>
 
                 <div class="sponsor-options-row ctf-tiers">
-                    <div class="sponsor-options-cell">Website Placements & Social Media Shoutouts</div>
-                    <div class="sponsor-options-cell sponsor-options-checkmark">✓</div>
-                    <div class="sponsor-options-cell sponsor-options-checkmark">✓</div>
+                    <div class="sponsor-options-cell" data-label="Feature">Website Placements & Social Media Shoutouts</div>
+                    <div class="sponsor-options-cell sponsor-options-checkmark" data-label="Tier 1">✓</div>
+                    <div class="sponsor-options-cell sponsor-options-checkmark" data-label="Tier 2">✓</div>
                 </div>
 
                 <div class="sponsor-options-row ctf-tiers">
-                    <div class="sponsor-options-cell">Logo Featured on T-Shirt</div>
-                    <div class="sponsor-options-cell">—</div>
-                    <div class="sponsor-options-cell sponsor-options-checkmark">✓</div>
+                    <div class="sponsor-options-cell" data-label="Feature">Logo Featured on T-Shirt</div>
+                    <div class="sponsor-options-cell" data-label="Tier 1">—</div>
+                    <div class="sponsor-options-cell sponsor-options-checkmark" data-label="Tier 2">✓</div>
                 </div>
 
                 <div class="sponsor-options-row ctf-tiers">
-                    <div class="sponsor-options-cell">Resume Book of Competitors & Organizers</div>
-                    <div class="sponsor-options-cell">—</div>
-                    <div class="sponsor-options-cell sponsor-options-checkmark">✓</div>
+                    <div class="sponsor-options-cell" data-label="Feature">Resume Book of Competitors & Organizers</div>
+                    <div class="sponsor-options-cell" data-label="Tier 1">—</div>
+                    <div class="sponsor-options-cell sponsor-options-checkmark" data-label="Tier 2">✓</div>
                 </div>
             </div>
         </div>
@@ -331,14 +392,14 @@
                     </div>
 
                     <div class="sponsor-options-row">
-                        <div class="sponsor-options-cell">Distribution of Company Recruitment Info during CTF</div>
-                        <div class="sponsor-options-cell cost-cell">$1,000</div>
+                        <div class="sponsor-options-cell" data-label="Option">Distribution of Company Recruitment Info during CTF</div>
+                        <div class="sponsor-options-cell cost-cell" data-label="Cost">$1,000</div>
                     </div>
 
                     <div class="sponsor-options-row">
-                        <div class="sponsor-options-cell">Company-sponsored CTF Challenge<br>
+                        <div class="sponsor-options-cell" data-label="Option">Company-sponsored CTF Challenge<br>
                             <small style="color: #9ca3af; font-size: 14px;">(includes info of members who solved your challenge)</small></div>
-                        <div class="sponsor-options-cell cost-cell">$2,000</div>
+                        <div class="sponsor-options-cell cost-cell" data-label="Cost">$2,000</div>
                     </div>
                 </div>
             </div>

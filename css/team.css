@@ -228,6 +228,30 @@
     content: "CP";
 }
 
+.avatar.micheallo {
+    background-color: #87CEEB;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    border: 0;
+}
+
+.avatar.micheallo::before {
+    content: "ML";
+}
+
+.avatar.cgossmann {
+    background-image: url('../images/ChristopherGossman.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0;
+}
+
 .role-badge {
     display: inline-block;
     padding: 4px 10px;
