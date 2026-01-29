@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Recordings - GreyHat @ GT</title>
+
+  <link rel="stylesheet" href="../css/style.min.css">
+  <link rel="stylesheet" href="../css/theme-dark.css">
+  <link rel="stylesheet" href="../css/recordings.css">
+  <link rel="stylesheet" href="../css/font-awesome.min.css">
+  <link rel="stylesheet" href="../css/mobile.css">
+</head>
+<body>
+  <nav class="main-nav">
+    <div class="brand">
+      <span>GreyHat @ GT</span>
+    </div>
+    <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+    <div class="nav-links" id="nav-links">
+      <a href="/">Home</a>
+      <a href="/meetings">Meetings</a>
+      <a href="/recordings">Recordings</a>
+      <a href="/sponsors">Sponsors</a>
+      <a href="/team">Team</a>
+      <a href="/publications">Publications</a>
+      <a class="cta" href="https://discord.gg/wQWyKpGNpC">Join Discord</a>
+    </div>
+    <div class="mobile-overlay" id="mobile-overlay"></div>
+  </nav>
+
+  <div class="recordings-hero">
+    <div class="recordings-title">Recordings</div>
+    <p class="recordings-subtitle">Catch up on past meetings, talks, and CTF sessions</p>
+  </div>
+
+  <section class="filters-section">
+    <div class="filters-container">
+      <div class="filter-group">
+        <label class="filter-label">Semester</label>
+        <select id="semester-filter" class="semester-select">
+          <option value="all">All Semesters</option>
+          <option value="Spring 2026">Spring 2026</option>
+          <option value="Fall 2025">Fall 2025</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label class="filter-label">Tags</label>
+        <div class="tag-filters" id="tag-filters">
+          <button class="tag-pill active" data-tag="all">All</button>
+          <button class="tag-pill" data-tag="General Meeting">General Meeting</button>
+          <button class="tag-pill" data-tag="CTF Meeting">CTF Meeting</button>
+          <button class="tag-pill" data-tag="Lightning Talk">Lightning Talk</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="recordings-grid" id="recordings-grid">
+    <!-- Videos are rendered by JavaScript -->
+  </section>
+
+  <div class="no-results" id="no-results" style="display: none;">
+    <p>No recordings match your filters.</p>
+  </div>
+
+  <footer id="footer">
+    <p class="small">© Copyright 2025 GreyHat</p>
+    <p class="small">
+      Powered by <a href="https://hexo.io/">Hexo</a> | Theme By <a href="https://github.com/fuzhouxxdong/hexo-theme-dxx">Dxx</a>
+    </p>
+  </footer>
+
+  <script>
+    const RECORDINGS = [
+      {
+        id: "ecRBhXiXrJw",
+        title: "Intro to CTF, Terminal Basics",
+        semester: "Spring 2026",
+        tags: ["CTF Meeting"],
+        date: "2026-01-27"
+      },
+      {
+        id: "gksfzOPK2lk",
+        title: "MEGA - Metadata Vulnerability | Lightning Talk by Aditya Jha",
+        semester: "Fall 2025",
+        tags: ["Lightning Talk"],
+        date: "2025-11-20"
+      },
+      {
+        id: "brT8ii0XSUA",
+        title: "Intro to Bug Bounties | Lightning Talk by Alistair Hakim",
+        semester: "Fall 2025",
+        tags: ["Lightning Talk"],
+        date: "2025-11-20"
+      },
+      {
+        id: "7ymIJi9fqB0",
+        title: "XMR Mining: How to Mine Cryptocurrency Like Your Favorite APT | Lightning Talk by Darshan Singh",
+        semester: "Fall 2025",
+        tags: ["Lightning Talk"],
+        date: "2025-11-20"
+      },
+      {
+        id: "Fl4Up-eOxr8",
+        title: "Kerberos - Lightning Talk by Mohammad Adain",
+        semester: "Fall 2025",
+        tags: ["Lightning Talk"],
+        date: "2025-11-13"
+      },
+      {
+        id: "eD1qgAF9fKA",
+        title: "Defining Cybersecurity - Lightning Talk by Daniel Moreno",
+        semester: "Fall 2025",
+        tags: ["Lightning Talk"],
+        date: "2025-11-13"
+      },
+      {
+        id: "Lq4pojDMJmE",
+        title: "Physical Security: Doors",
+        semester: "Fall 2025",
+        tags: ["General Meeting"],
+        date: "2025-09-25"
+      },
+      {
+        id: "4PpH_OhlZG8",
+        title: "LockBit Ransomware Gang and Downfall",
+        semester: "Fall 2025",
+        tags: ["General Meeting"],
+        date: "2025-09-05"
+      },
+      {
+        id: "yaj0twAEBRA",
+        title: "s1ngularity NX Supply Chain Attack",
+        semester: "Fall 2025",
+        tags: ["General Meeting"],
+        date: "2025-08-29"
+      }
+    ];
+
+    // Filtering & Rendering Logic
+    let currentSemester = 'all';
+    let currentTag = 'all';
+
+    function getFilteredRecordings() {
+      return RECORDINGS.filter(recording => {
+        const semesterMatch = currentSemester === 'all' || recording.semester === currentSemester;
+        const tagMatch = currentTag === 'all' || recording.tags.includes(currentTag);
+        return semesterMatch && tagMatch;
+      }).sort((a, b) => new Date(b.date) - new Date(a.date));
+    }
+
+    function createVideoCard(recording) {
+      const tagBadges = recording.tags.map(tag => {
+        const badgeClass = getTagBadgeClass(tag);
+        return `<span class="badge ${badgeClass}">${tag}</span>`;
+      }).join('');
+
+      return `
+        <div class="recording-card">
+          <div class="video-wrapper">
+            <iframe
+              src="https://www.youtube.com/embed/${recording.id}"
+              title="${recording.title}"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowfullscreen
+              loading="lazy"
+            ></iframe>
+          </div>
+          <div class="recording-info">
+            <div class="recording-badges">${tagBadges}</div>
+            <h3 class="recording-title">${recording.title}</h3>
+            <div class="recording-meta">
+              <span class="semester-tag">${recording.semester}</span>
+              ${recording.date ? `<span class="recording-date">${formatDate(recording.date)}</span>` : ''}
+            </div>
+          </div>
+        </div>
+      `;
+    }
+
+    function getTagBadgeClass(tag) {
+      switch (tag) {
+        case 'General Meeting': return 'badge-green';
+        case 'CTF Meeting': return 'badge-red';
+        case 'Lightning Talk': return 'badge-purple';
+        default: return 'badge-blue';
+      }
+    }
+
+    function formatDate(dateStr) {
+      const date = new Date(dateStr);
+      return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+    }
+
+    function renderRecordings() {
+      const grid = document.getElementById('recordings-grid');
+      const noResults = document.getElementById('no-results');
+      const filtered = getFilteredRecordings();
+
+      if (filtered.length === 0) {
+        grid.innerHTML = '';
+        noResults.style.display = 'block';
+      } else {
+        noResults.style.display = 'none';
+        grid.innerHTML = filtered.map(createVideoCard).join('');
+      }
+    }
+
+    // Semester filter
+    document.getElementById('semester-filter').addEventListener('change', (e) => {
+      currentSemester = e.target.value;
+      renderRecordings();
+    });
+
+    // Tag filters
+    document.getElementById('tag-filters').addEventListener('click', (e) => {
+      if (e.target.classList.contains('tag-pill')) {
+        // Update active state
+        document.querySelectorAll('.tag-pill').forEach(pill => pill.classList.remove('active'));
+        e.target.classList.add('active');
+        
+        currentTag = e.target.dataset.tag;
+        renderRecordings();
+      }
+    });
+
+    // Initial render
+    renderRecordings();
+
+    // Mobile Menu
+    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
+    const navLinks = document.getElementById('nav-links');
+    const mobileOverlay = document.getElementById('mobile-overlay');
+
+    function toggleMobileMenu() {
+      mobileMenuToggle.classList.toggle('active');
+      navLinks.classList.toggle('active');
+      mobileOverlay.classList.toggle('active');
+    }
+
+    function closeMobileMenu() {
+      mobileMenuToggle.classList.remove('active');
+      navLinks.classList.remove('active');
+      mobileOverlay.classList.remove('active');
+    }
+
+    mobileMenuToggle.addEventListener('click', toggleMobileMenu);
+    mobileOverlay.addEventListener('click', closeMobileMenu);
+
+    const navLinkElements = navLinks.querySelectorAll('a');
+    navLinkElements.forEach(link => {
+      link.addEventListener('click', closeMobileMenu);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        closeMobileMenu();
+      }
+    });
+  </script>
+</body>
+</html>
