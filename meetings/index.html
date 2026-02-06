@@ -60,9 +60,30 @@
       </div>
   </section>
 
-  <div class="subscribe-row">
-    <a class="subscribe-btn" href="https://calendar.google.com/calendar/u/0?cid=cDZmNTczNXVjbGh1aWlqZzNrMmxhZzRkbjBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">🗓 Subscribe to Calendar</a>
-  </div>
+  <section class="calendar-section">
+    <div class="calendar-header">
+      <h2>Upcoming Events</h2>
+      <div class="calendar-controls">
+        <div class="view-toggle">
+          <button class="view-btn active" data-view="MONTH">Month</button>
+          <button class="view-btn" data-view="WEEK">Week</button>
+          <button class="view-btn" data-view="AGENDA">List</button>
+        </div>
+        <a class="subscribe-btn" href="https://calendar.google.com/calendar/u/0?cid=cDZmNTczNXVjbGh1aWlqZzNrMmxhZzRkbjBAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ">
+          <span class="subscribe-icon">+</span> Subscribe
+        </a>
+      </div>
+    </div>
+    <div class="calendar-embed-wrapper">
+      <iframe 
+        id="calendar-iframe"
+        src="https://calendar.google.com/calendar/embed?src=p6f5735uclhuiijg3k2lag4dn0%40group.calendar.google.com&ctz=America%2FNew_York&mode=MONTH&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0&bgcolor=%23111111&color=%2300e5ff" 
+        class="calendar-embed"
+        frameborder="0" 
+        scrolling="no">
+      </iframe>
+    </div>
+  </section>
 
   <div class="helper-text">
     * Non-weekly events happen based on demand. Always check Discord for the latest updates.
@@ -107,6 +128,20 @@
       if (e.key === 'Escape') {
         closeMobileMenu();
       }
+    });
+
+    // Calendar view toggle
+    const viewBtns = document.querySelectorAll('.view-btn');
+    const calendarIframe = document.getElementById('calendar-iframe');
+    const baseUrl = 'https://calendar.google.com/calendar/embed?src=p6f5735uclhuiijg3k2lag4dn0%40group.calendar.google.com&ctz=America%2FNew_York&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=0&showCalendars=0&showTz=0&bgcolor=%23111111&color=%2300e5ff';
+
+    viewBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        viewBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const view = btn.dataset.view;
+        calendarIframe.src = `${baseUrl}&mode=${view}`;
+      });
     });
   </script>
 </body>
