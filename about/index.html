@@ -1,110 +1,127 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>GreyHat @ GT</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>GreyHat @ GT</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-  <link rel="stylesheet" href="../css/style.min.css">
-  <link rel="stylesheet" href="../css/theme-dark.css">
-  <link rel="stylesheet" href="../css/font-awesome.min.css">
-  <link rel="stylesheet" href="../css/mobile.css">
-</head>
-<body>
-  <nav class="main-nav">
-    <div class="brand">
-      <span>GreyHat @ GT</span>
-    </div>
-    <button class="mobile-menu-toggle" id="mobile-menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-    <div class="nav-links" id="nav-links">
-      <a href="/">Home</a>
-      <a href="/meetings">Meetings</a>
-      <a href="/recordings">Recordings</a>
-      <a href="/sponsors">Sponsors</a>
-      <a href="/team">Team</a>
-      <a href="/publications">Publications</a>
-      <a class="cta" href="https://discord.gg/wQWyKpGNpC">Join Discord</a>
-    </div>
-    <div class="mobile-overlay" id="mobile-overlay"></div>
-  </nav>
+    <link rel="stylesheet" href="../css/style.min.css" />
+    <link rel="stylesheet" href="../css/theme-dark.css" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/mobile.css" />
+  </head>
+  <body>
+    <nav class="main-nav">
+      <div class="brand">
+        <span>GreyHat @ GT</span>
+      </div>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="/">Home</a>
+        <a href="/meetings">Meetings</a>
+        <a href="/recordings">Recordings</a>
+        <a href="/sponsors">Sponsors</a>
+        <a href="/team">Team</a>
+        <a href="/publications">Publications</a>
+        <a class="cta" href="https://discord.gg/wQWyKpGNpC">Join Discord</a>
+      </div>
+      <div class="mobile-overlay" id="mobile-overlay"></div>
+    </nav>
 
-  <div class="profile">
-    <section id="wrapper">
-      <header id="header">
-        <h1>Hacking @ Georgia Tech</h1>
-        <h2>Student-run cybersecurity club and CTF team</h2>
-        <div class="hero-cta">
-          <a class="button button-primary" href="https://discord.gg/wQWyKpGNpC">Join Us</a>
-        </div>
-      </header>
-    </section>
-  </div>
-
-  <section class="post" id="wrapper">
-    <article>
-      <header>
-        <h1>About</h1>
-      </header>
-
-      <section id="post-body">
-        <p>
-          GreyHat is <a href="http://www.gatech.edu/" target="_blank" rel="noopener">Georgia Tech</a>'s Cybersecurity club. We focus on teaching practical skills in analyzing, exploiting, and defending computer systems, along with reverse engineering applications. We also have a competitive <a href="https://ctftime.org/team/46459">Capture-the-Flag (CTF) team</a>. All skill levels are welcome, even if you've never heard the word "cybersecurity" before! 
-        </p>
-        <p>
-          We also host a yearly beginner-intermediate CTF, <a href="https://wreckctf.com/">WRECKCTF</a> (<a href="https://ctftime.org/event/1775/">ctftime</a>).
-        </p>
-        <p>
-          We are open to all GT students, including OMSCS students.
-        </p>
+    <div class="profile">
+      <section id="wrapper">
+        <header id="header">
+          <h1>Hacking @ Georgia Tech</h1>
+          <h2>Student-run cybersecurity club and CTF team</h2>
+          <div class="hero-cta">
+            <a
+              class="button button-primary"
+              href="https://discord.gg/wQWyKpGNpC"
+              >Join Us</a
+            >
+          </div>
+        </header>
       </section>
-    </article>
-  </section>
+    </div>
 
-  <footer id="footer">
-    <p class="small">© Copyright 2025 GreyHat</p>
-    <p class="small">
-      Powered by <a href="https://hexo.io/">Hexo</a> | Theme By <a href="https://github.com/fuzhouxxdong/hexo-theme-dxx">Dxx</a>
-    </p>
-  </footer>
+    <section class="post" id="wrapper">
+      <article>
+        <header>
+          <h1>About</h1>
+        </header>
 
-  <script>
-    // Mobile menu functionality
-    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-    const navLinks = document.getElementById('nav-links');
-    const mobileOverlay = document.getElementById('mobile-overlay');
+        <section id="post-body">
+          <p>
+            GreyHat is
+            <a href="http://www.gatech.edu/" target="_blank" rel="noopener"
+              >Georgia Tech</a
+            >'s Cybersecurity club. We focus on teaching practical skills in
+            analyzing, exploiting, and defending computer systems, along with
+            reverse engineering applications. We also have a competitive
+            <a href="https://ctftime.org/team/46459"
+              >Capture-the-Flag (CTF) team</a
+            >. All skill levels are welcome, even if you've never heard the word
+            "cybersecurity" before!
+          </p>
+          <p>
+            We also host a yearly beginner-intermediate CTF,
+            <a href="https://wreckctf.com/">WRECKCTF</a> (<a
+              href="https://ctftime.org/event/1775/"
+              >ctftime</a
+            >).
+          </p>
+          <p>We are open to all GT students, including OMSCS students.</p>
+        </section>
+      </article>
+    </section>
 
-    function toggleMobileMenu() {
-      mobileMenuToggle.classList.toggle('active');
-      navLinks.classList.toggle('active');
-      mobileOverlay.classList.toggle('active');
-    }
+    <footer id="footer">
+      <p class="small">© Copyright 2025 GreyHat</p>
+      <p class="small">
+        Powered by <a href="https://hexo.io/">Hexo</a> | Theme By
+        <a href="https://github.com/fuzhouxxdong/hexo-theme-dxx">Dxx</a>
+      </p>
+    </footer>
 
-    function closeMobileMenu() {
-      mobileMenuToggle.classList.remove('active');
-      navLinks.classList.remove('active');
-      mobileOverlay.classList.remove('active');
-    }
+    <script>
+      // Mobile menu functionality
+      const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+      const navLinks = document.getElementById("nav-links");
+      const mobileOverlay = document.getElementById("mobile-overlay");
 
-    mobileMenuToggle.addEventListener('click', toggleMobileMenu);
-    mobileOverlay.addEventListener('click', closeMobileMenu);
-
-    // Close menu when clicking on nav links
-    const navLinkElements = navLinks.querySelectorAll('a');
-    navLinkElements.forEach(link => {
-      link.addEventListener('click', closeMobileMenu);
-    });
-
-    // Close menu on escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        closeMobileMenu();
+      function toggleMobileMenu() {
+        mobileMenuToggle.classList.toggle("active");
+        navLinks.classList.toggle("active");
+        mobileOverlay.classList.toggle("active");
       }
-    });
-  </script>
-</body>
+
+      function closeMobileMenu() {
+        mobileMenuToggle.classList.remove("active");
+        navLinks.classList.remove("active");
+        mobileOverlay.classList.remove("active");
+      }
+
+      mobileMenuToggle.addEventListener("click", toggleMobileMenu);
+      mobileOverlay.addEventListener("click", closeMobileMenu);
+
+      // Close menu when clicking on nav links
+      const navLinkElements = navLinks.querySelectorAll("a");
+      navLinkElements.forEach((link) => {
+        link.addEventListener("click", closeMobileMenu);
+      });
+
+      // Close menu on escape key
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          closeMobileMenu();
+        }
+      });
+    </script>
+  </body>
 </html>

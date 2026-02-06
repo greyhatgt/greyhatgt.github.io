@@ -1,380 +1,417 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>GreyHat @ GT</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
 
-  <link rel="stylesheet" href="../css/style.min.css">
-  <link rel="stylesheet" href="../css/theme-dark.css">
-  <link rel="stylesheet" href="../css/sponsors.css">
-  <link rel="stylesheet" href="../css/font-awesome.min.css">
-  <link rel="stylesheet" href="../css/mobile.css">
-  <style>
-    .sponsor-options-wrapper {
-      background: #0f0f10;
-      border: 1px solid #262626;
-      border-radius: 16px;
-      padding: 24px;
-      margin: 24px 0;
-      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-    }
-    
-    .sponsor-options-title {
-      font-size: 24px;
-      font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-    
-    .sponsor-options-table {
-      width: 100%;
-      border-collapse: collapse;
-    }
-    
-    .sponsor-options-row {
-      display: grid;
-      grid-template-columns: 2fr 1fr 1fr 1fr;
-      gap: 16px;
-      padding: 12px 0;
-      border-bottom: 1px solid #262626;
-    }
-    
-    .sponsor-options-row:last-child {
-      border-bottom: none;
-    }
-    
-    .sponsor-options-header {
-      background: #1a1a1b;
-      border-radius: 8px;
-      padding: 16px;
-      font-weight: 700;
-      color: #06b6d4;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      font-size: 14px;
-    }
-    
-    .sponsor-options-cell {
-      color: #d1d5db;
-      font-size: 16px;
-      display: flex;
-      align-items: center;
-    }
-    
-    .sponsor-options-checkmark {
-      color: #10b981;
-      font-weight: 700;
-      font-size: 18px;
-      justify-content: center;
-      text-align: center;
-    }
-    
-    .sponsor-options-row.ctf-tiers .sponsor-options-cell:not(:first-child) {
-      justify-content: center;
-      text-align: center;
-    }
-    
-    .sponsor-options-row .sponsor-options-cell:nth-child(4) {
-      justify-content: center;
-      text-align: center;
-    }
-    
-    .club-sponsor-description {
-      background: #1a1a1b;
-      border-radius: 8px;
-      padding: 20px;
-      color: #d1d5db;
-      font-size: 16px;
-      line-height: 1.6;
-      margin: 16px 0;
-    }
-    
-    .club-sponsor-description strong {
-      color: #06b6d4;
-      font-weight: 700;
-    }
-    
-    .sponsor-table {
-      margin: 0;
-    }
-    
-    .sponsor-options-row.ctf-tiers {
-      grid-template-columns: 2fr 1fr 1fr;
-    }
-    
-    .sponsor-options-row.ctf-tiers .sponsor-options-cell:first-child {
-      font-weight: 700;
-      color: #ffffff;
-    }
-    
-    .cost-cell {
-      font-weight: 700;
-      color: #06b6d4;
-      font-size: 18px;
-    }
-    
-    .tier-cell {
-      font-weight: 700;
-      color: #f59e0b;
-      text-align: center;
-    }
-    
-    .sponsor-note {
-      background: #1a1a1b;
-      border-left: 4px solid #f59e0b;
-      padding: 16px 20px;
-      margin: 16px 0;
-      border-radius: 0 8px 8px 0;
-      color: #d1d5db;
-      font-style: italic;
-    }
-    
-    .sponsor-note strong {
-      color: #f59e0b;
-    }
-    
-    .current-sponsors {
-      max-width: 1200px;
-      margin: 40px auto;
-      padding: 0 20px;
-    }
-    
-    .sponsors-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 32px;
-      margin-top: 32px;
-    }
-    
-    .sponsor-card {
-      background: #0f0f10;
-      border: 1px solid #262626;
-      border-radius: 16px;
-      padding: 32px;
-      text-align: center;
-      transition: all 0.3s ease;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
-    }
-    
-    .sponsor-card:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
-      border-color: #404040;
-    }
-    
-    .sponsor-logo {
-      max-width: 200px;
-      max-height: 80px;
-      width: auto;
-      height: auto;
-      object-fit: contain;
-      filter: brightness(0.95);
-      transition: filter 0.3s ease;
-    }
-    
-    .sponsor-card:hover .sponsor-logo {
-      filter: brightness(1.1);
-    }
-    
-    .sponsor-description {
-      color: #9ca3af;
-      font-size: 14px;
-      line-height: 1.6;
-      margin: 0;
-      flex-grow: 1;
-    }
-    
-    .sponsor-link {
-      color: #06b6d4;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 14px;
-      transition: color 0.3s ease;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-    }
-    
-    .sponsor-link:hover {
-      color: #0891b2;
-    }
-    
-    .sponsor-link::after {
-      content: "→";
-      transition: transform 0.3s ease;
-    }
-    
-    .sponsor-link:hover::after {
-      transform: translateX(4px);
-    }
-    
-    @media (max-width: 768px) {
+    <link rel="stylesheet" href="../css/style.min.css" />
+    <link rel="stylesheet" href="../css/theme-dark.css" />
+    <link rel="stylesheet" href="../css/sponsors.css" />
+    <link rel="stylesheet" href="../css/font-awesome.min.css" />
+    <link rel="stylesheet" href="../css/mobile.css" />
+    <style>
       .sponsor-options-wrapper {
-        padding: 16px;
-        margin: 16px 0;
+        background: #0f0f10;
+        border: 1px solid #262626;
+        border-radius: 16px;
+        padding: 24px;
+        margin: 24px 0;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
       }
-      
+
       .sponsor-options-title {
-        font-size: 20px;
-        margin-bottom: 16px;
-      }
-      
-      .sponsor-options-row {
-        display: block;
-        border: 1px solid #333;
-        border-radius: 8px;
-        margin-bottom: 12px;
-        padding: 16px;
-        background: #1a1a1b;
-      }
-      
-      .sponsor-options-row.sponsor-options-header {
-        background: #262626;
+        font-size: 24px;
         font-weight: 700;
-        color: #06b6d4;
-        text-transform: uppercase;
-        letter-spacing: 0.5px;
-        font-size: 12px;
+        color: #ffffff;
+        margin-bottom: 20px;
+        text-align: center;
       }
-      
-      .sponsor-options-cell {
-        display: block;
-        padding: 8px 0;
-        border-bottom: 1px solid #333;
-        text-align: left;
-        justify-content: flex-start;
+
+      .sponsor-options-table {
+        width: 100%;
+        border-collapse: collapse;
       }
-      
-      .sponsor-options-cell:last-child {
+
+      .sponsor-options-row {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+        gap: 16px;
+        padding: 12px 0;
+        border-bottom: 1px solid #262626;
+      }
+
+      .sponsor-options-row:last-child {
         border-bottom: none;
       }
-      
-      .sponsor-options-cell:before {
-        content: attr(data-label);
+
+      .sponsor-options-header {
+        background: #1a1a1b;
+        border-radius: 8px;
+        padding: 16px;
         font-weight: 700;
         color: #06b6d4;
-        display: block;
-        margin-bottom: 4px;
-        font-size: 12px;
         text-transform: uppercase;
         letter-spacing: 0.5px;
+        font-size: 14px;
       }
-      
-      .sponsor-options-row.sponsor-options-header .sponsor-options-cell:before {
-        display: none;
+
+      .sponsor-options-cell {
+        color: #d1d5db;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
       }
-      
-      .sponsor-options-row.ctf-tiers {
-        display: block;
+
+      .sponsor-options-checkmark {
+        color: #10b981;
+        font-weight: 700;
+        font-size: 18px;
+        justify-content: center;
+        text-align: center;
       }
-      
+
       .sponsor-options-row.ctf-tiers .sponsor-options-cell:not(:first-child) {
-        text-align: left;
-        justify-content: flex-start;
+        justify-content: center;
+        text-align: center;
       }
-      
+
       .sponsor-options-row .sponsor-options-cell:nth-child(4) {
-        text-align: left;
-        justify-content: flex-start;
+        justify-content: center;
+        text-align: center;
       }
-      
+
       .club-sponsor-description {
-        padding: 16px;
-        font-size: 14px;
+        background: #1a1a1b;
+        border-radius: 8px;
+        padding: 20px;
+        color: #d1d5db;
+        font-size: 16px;
+        line-height: 1.6;
+        margin: 16px 0;
       }
-      
+
+      .club-sponsor-description strong {
+        color: #06b6d4;
+        font-weight: 700;
+      }
+
+      .sponsor-table {
+        margin: 0;
+      }
+
+      .sponsor-options-row.ctf-tiers {
+        grid-template-columns: 2fr 1fr 1fr;
+      }
+
+      .sponsor-options-row.ctf-tiers .sponsor-options-cell:first-child {
+        font-weight: 700;
+        color: #ffffff;
+      }
+
+      .cost-cell {
+        font-weight: 700;
+        color: #06b6d4;
+        font-size: 18px;
+      }
+
+      .tier-cell {
+        font-weight: 700;
+        color: #f59e0b;
+        text-align: center;
+      }
+
       .sponsor-note {
-        padding: 12px 16px;
-        font-size: 14px;
+        background: #1a1a1b;
+        border-left: 4px solid #f59e0b;
+        padding: 16px 20px;
+        margin: 16px 0;
+        border-radius: 0 8px 8px 0;
+        color: #d1d5db;
+        font-style: italic;
       }
-      
+
+      .sponsor-note strong {
+        color: #f59e0b;
+      }
+
       .current-sponsors {
-        padding: 0 16px;
-        margin: 24px auto;
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 0 20px;
       }
-      
+
       .sponsors-grid {
-        grid-template-columns: 1fr;
-        gap: 24px;
-        margin-top: 24px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 32px;
+        margin-top: 32px;
       }
-      
+
       .sponsor-card {
-        padding: 24px;
+        background: #0f0f10;
+        border: 1px solid #262626;
+        border-radius: 16px;
+        padding: 32px;
+        text-align: center;
+        transition: all 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
       }
-      
+
+      .sponsor-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4);
+        border-color: #404040;
+      }
+
       .sponsor-logo {
-        max-width: 160px;
-        max-height: 60px;
+        max-width: 200px;
+        max-height: 80px;
+        width: auto;
+        height: auto;
+        object-fit: contain;
+        filter: brightness(0.95);
+        transition: filter 0.3s ease;
       }
-    }
-  </style>
-</head>
-<body>
-<nav class="main-nav">
-    <div class="brand">
+
+      .sponsor-card:hover .sponsor-logo {
+        filter: brightness(1.1);
+      }
+
+      .sponsor-description {
+        color: #9ca3af;
+        font-size: 14px;
+        line-height: 1.6;
+        margin: 0;
+        flex-grow: 1;
+      }
+
+      .sponsor-link {
+        color: #06b6d4;
+        text-decoration: none;
+        font-weight: 600;
+        font-size: 14px;
+        transition: color 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .sponsor-link:hover {
+        color: #0891b2;
+      }
+
+      .sponsor-link::after {
+        content: "→";
+        transition: transform 0.3s ease;
+      }
+
+      .sponsor-link:hover::after {
+        transform: translateX(4px);
+      }
+
+      @media (max-width: 768px) {
+        .sponsor-options-wrapper {
+          padding: 16px;
+          margin: 16px 0;
+        }
+
+        .sponsor-options-title {
+          font-size: 20px;
+          margin-bottom: 16px;
+        }
+
+        .sponsor-options-row {
+          display: block;
+          border: 1px solid #333;
+          border-radius: 8px;
+          margin-bottom: 12px;
+          padding: 16px;
+          background: #1a1a1b;
+        }
+
+        .sponsor-options-row.sponsor-options-header {
+          background: #262626;
+          font-weight: 700;
+          color: #06b6d4;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+          font-size: 12px;
+        }
+
+        .sponsor-options-cell {
+          display: block;
+          padding: 8px 0;
+          border-bottom: 1px solid #333;
+          text-align: left;
+          justify-content: flex-start;
+        }
+
+        .sponsor-options-cell:last-child {
+          border-bottom: none;
+        }
+
+        .sponsor-options-cell:before {
+          content: attr(data-label);
+          font-weight: 700;
+          color: #06b6d4;
+          display: block;
+          margin-bottom: 4px;
+          font-size: 12px;
+          text-transform: uppercase;
+          letter-spacing: 0.5px;
+        }
+
+        .sponsor-options-row.sponsor-options-header
+          .sponsor-options-cell:before {
+          display: none;
+        }
+
+        .sponsor-options-row.ctf-tiers {
+          display: block;
+        }
+
+        .sponsor-options-row.ctf-tiers .sponsor-options-cell:not(:first-child) {
+          text-align: left;
+          justify-content: flex-start;
+        }
+
+        .sponsor-options-row .sponsor-options-cell:nth-child(4) {
+          text-align: left;
+          justify-content: flex-start;
+        }
+
+        .club-sponsor-description {
+          padding: 16px;
+          font-size: 14px;
+        }
+
+        .sponsor-note {
+          padding: 12px 16px;
+          font-size: 14px;
+        }
+
+        .current-sponsors {
+          padding: 0 16px;
+          margin: 24px auto;
+        }
+
+        .sponsors-grid {
+          grid-template-columns: 1fr;
+          gap: 24px;
+          margin-top: 24px;
+        }
+
+        .sponsor-card {
+          padding: 24px;
+        }
+
+        .sponsor-logo {
+          max-width: 160px;
+          max-height: 60px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="main-nav">
+      <div class="brand">
         <span>GreyHat @ GT</span>
-    </div>
-    <button class="mobile-menu-toggle" id="mobile-menu-toggle">
+      </div>
+      <button class="mobile-menu-toggle" id="mobile-menu-toggle">
         <span></span>
         <span></span>
         <span></span>
-    </button>
-    <div class="nav-links" id="nav-links">
-      <a href="/">Home</a>
-      <a href="/meetings">Meetings</a>
-      <a href="/recordings">Recordings</a>
-      <a href="/sponsors">Sponsors</a>
-      <a href="/team">Team</a>
-      <a href="/publications">Publications</a>
-      <a class="cta" href="https://discord.gg/wQWyKpGNpC">Join Discord</a>
+      </button>
+      <div class="nav-links" id="nav-links">
+        <a href="/">Home</a>
+        <a href="/meetings">Meetings</a>
+        <a href="/recordings">Recordings</a>
+        <a href="/sponsors">Sponsors</a>
+        <a href="/team">Team</a>
+        <a href="/publications">Publications</a>
+        <a class="cta" href="https://discord.gg/wQWyKpGNpC">Join Discord</a>
+      </div>
+      <div class="mobile-overlay" id="mobile-overlay"></div>
+    </nav>
+
+    <div class="sponsors-hero">
+      <div class="sponsors-title">Sponsors</div>
+      <p class="sponsors-sub">
+        Thank you to our sponsors for supporting GreyHat! We're currently
+        recruiting sponsors for 2025–2026.
+      </p>
     </div>
-    <div class="mobile-overlay" id="mobile-overlay"></div>
-</nav>
 
-<div class="sponsors-hero">
-    <div class="sponsors-title">Sponsors</div>
-    <p class="sponsors-sub">Thank you to our sponsors for supporting GreyHat! We're currently recruiting sponsors for 2025–2026.</p>
-</div>
+    <div class="current-sponsors">
+      <div class="sponsors-grid">
+        <div class="sponsor-card">
+          <img
+            src="/sponsors/sponsorInfo/MagnetForensicsLogo.png"
+            alt="Magnet Forensics"
+            class="sponsor-logo"
+          />
+          <p class="sponsor-description">
+            Magnet Forensics develops digital investigation solutions that help
+            organizations fight crime, protect assets, and guard digital
+            infrastructure.
+          </p>
+          <a
+            href="https://www.magnetforensics.com"
+            target="_blank"
+            class="sponsor-link"
+            >Visit Website</a
+          >
+        </div>
 
-<div class="current-sponsors">
-    <div class="sponsors-grid">
         <div class="sponsor-card">
-            <img src="/sponsors/sponsorInfo/MagnetForensicsLogo.png" alt="Magnet Forensics" class="sponsor-logo">
-            <p class="sponsor-description">Magnet Forensics develops digital investigation solutions that help organizations fight crime, protect assets, and guard digital infrastructure.</p>
-            <a href="https://www.magnetforensics.com" target="_blank" class="sponsor-link">Visit Website</a>
+          <img
+            src="/sponsors/sponsorInfo/ValidinLogo.png"
+            alt="Validin"
+            class="sponsor-logo"
+          />
+          <p class="sponsor-description">
+            Validin provides identity verification and authentication solutions
+            to help organizations secure their digital infrastructure and
+            protect against fraud.
+          </p>
+          <a href="https://www.validin.com" target="_blank" class="sponsor-link"
+            >Visit Website</a
+          >
         </div>
-        
+
         <div class="sponsor-card">
-            <img src="/sponsors/sponsorInfo/ValidinLogo.png" alt="Validin" class="sponsor-logo">
-            <p class="sponsor-description">Validin provides identity verification and authentication solutions to help organizations secure their digital infrastructure and protect against fraud.</p>
-            <a href="https://www.validin.com" target="_blank" class="sponsor-link">Visit Website</a>
+          <img
+            src="/sponsors/sponsorInfo/VerkadaLogo.png"
+            alt="Verkada"
+            class="sponsor-logo"
+          />
+          <p class="sponsor-description">
+            Verkada builds cloud-based security solutions including cameras,
+            access control, and environmental sensors for modern organizations.
+          </p>
+          <a href="https://www.verkada.com" target="_blank" class="sponsor-link"
+            >Visit Website</a
+          >
         </div>
-        
-        <div class="sponsor-card">
-            <img src="/sponsors/sponsorInfo/VerkadaLogo.png" alt="Verkada" class="sponsor-logo">
-            <p class="sponsor-description">Verkada builds cloud-based security solutions including cameras, access control, and environmental sensors for modern organizations.</p>
-            <a href="https://www.verkada.com" target="_blank" class="sponsor-link">Visit Website</a>
-        </div>
+      </div>
     </div>
-</div>
 
-<!-- <section class="section">
+    <!-- <section class="section">
   <div class="section-title">Workshop Sponsors</div>
   <div class="logo-grid">
     <div class="logo-card">Your Logo Here</div>
   </div>
 </section> -->
 
-<section class="section">
-    <div class="section-title">Fall 2025-2026</div>
-    <!-- <div class="logo-grid">
+    <section class="section">
+      <div class="section-title">Fall 2025-2026</div>
+      <!-- <div class="logo-grid">
       <div class="logo-card">Your Logo Here</div>
       <div class="logo-card">Your Logo Here</div>
       <div class="logo-card">Your Logo Here</div>
@@ -382,193 +419,285 @@
       <div class="logo-card">Your Logo Here</div>
       <div class="logo-card">Your Logo Here</div>
     </div> -->
-</section>
+    </section>
 
-<section class="section">
-    <div class="callout">
+    <section class="section">
+      <div class="callout">
         <h3>Interested in sponsoring?</h3>
-        <p>GreyHat, the student-run cybersecurity club at Georgia Institute of Technology, is seeking sponsors and supporters for the 2025–2026 school year!</p>
-        <p>This is a great opportunity to expose your organization to talented, security-minded undergraduates and our broader online community of nearly 2,000 undergrads, graduate students, and alumni.</p>
-        <p>Specifically, we are looking for sponsors to deliver talks to students, sponsor CTF problems/prizes, and fund snacks for our meetings. We are also looking for industry partners who can help mentor advanced students through semester-long projects.</p>
-        <p>Support can be given via a sponsorship or as a tax deductible gift.</p>
-        <p> Grey Hat is Georgia Tech’s largest cybersecurity club. With 100+ active members in computer science and engineering, and our online network of nearly 2,000 students and alumni, our community could be a great opportunity to recruit the next generation of security and software engineers at your company!</p>
-        <p>Please email <a href="mailto:greyhat.gt@gmail.com">greyhat.gt@gmail.com</a> for more information.</p>
+        <p>
+          GreyHat, the student-run cybersecurity club at Georgia Institute of
+          Technology, is seeking sponsors and supporters for the 2025–2026
+          school year!
+        </p>
+        <p>
+          This is a great opportunity to expose your organization to talented,
+          security-minded undergraduates and our broader online community of
+          nearly 2,000 undergrads, graduate students, and alumni.
+        </p>
+        <p>
+          Specifically, we are looking for sponsors to deliver talks to
+          students, sponsor CTF problems/prizes, and fund snacks for our
+          meetings. We are also looking for industry partners who can help
+          mentor advanced students through semester-long projects.
+        </p>
+        <p>
+          Support can be given via a sponsorship or as a tax deductible gift.
+        </p>
+        <p>
+          Grey Hat is Georgia Tech’s largest cybersecurity club. With 100+
+          active members in computer science and engineering, and our online
+          network of nearly 2,000 students and alumni, our community could be a
+          great opportunity to recruit the next generation of security and
+          software engineers at your company!
+        </p>
+        <p>
+          Please email
+          <a href="mailto:greyhat.gt@gmail.com">greyhat.gt@gmail.com</a> for
+          more information.
+        </p>
         <div class="sponsor-options-wrapper">
-            <div class="sponsor-options-title">Basic Options</div>
+          <div class="sponsor-options-title">Basic Options</div>
+          <div class="sponsor-options-table">
+            <div class="sponsor-options-row sponsor-options-header">
+              <div class="sponsor-options-cell">Option</div>
+              <div class="sponsor-options-cell">Cost</div>
+              <div class="sponsor-options-cell">Duration</div>
+              <div class="sponsor-options-cell">Food</div>
+            </div>
+
+            <div class="sponsor-options-row">
+              <div class="sponsor-options-cell" data-label="Option">Chat</div>
+              <div class="sponsor-options-cell cost-cell" data-label="Cost">
+                $1,000
+              </div>
+              <div class="sponsor-options-cell" data-label="Duration">
+                30 min
+              </div>
+              <div class="sponsor-options-cell" data-label="Food">—</div>
+            </div>
+
+            <div class="sponsor-options-row">
+              <div class="sponsor-options-cell" data-label="Option">
+                Workshop
+              </div>
+              <div class="sponsor-options-cell cost-cell" data-label="Cost">
+                $2,500
+              </div>
+              <div class="sponsor-options-cell" data-label="Duration">
+                1 hr+
+              </div>
+              <div
+                class="sponsor-options-cell sponsor-options-checkmark"
+                data-label="Food"
+              >
+                ✓
+              </div>
+            </div>
+          </div>
+        </div>
+        <p></p>
+        <p>
+          *Chat - connect with students right after Thursday meetings <br />
+          *Workshop - partner event for your company to directly present,
+          engage, & recruit
+        </p>
+        <p></p>
+        <div class="sponsor-options-wrapper">
+          <div class="sponsor-table">
+            <div class="sponsor-options-title">Itemized Options</div>
             <div class="sponsor-options-table">
-                <div class="sponsor-options-row sponsor-options-header">
-                    <div class="sponsor-options-cell">Option</div>
-                    <div class="sponsor-options-cell">Cost</div>
-                    <div class="sponsor-options-cell">Duration</div>
-                    <div class="sponsor-options-cell">Food</div>
+              <div class="sponsor-options-row sponsor-options-header">
+                <div class="sponsor-options-cell">Option</div>
+                <div class="sponsor-options-cell">Cost</div>
+              </div>
 
+              <div class="sponsor-options-row">
+                <div class="sponsor-options-cell" data-label="Option">
+                  Resume Book of Students
                 </div>
+                <div class="sponsor-options-cell cost-cell" data-label="Cost">
+                  $500
+                </div>
+              </div>
 
-                <div class="sponsor-options-row">
-                    <div class="sponsor-options-cell" data-label="Option">Chat</div>
-                    <div class="sponsor-options-cell cost-cell" data-label="Cost">$1,000</div>
-                    <div class="sponsor-options-cell" data-label="Duration">30 min</div>
-                    <div class="sponsor-options-cell" data-label="Food">—</div>
+              <div class="sponsor-options-row">
+                <div class="sponsor-options-cell" data-label="Option">
+                  Active Recruiting Info Distribution
                 </div>
-
-                <div class="sponsor-options-row">
-                    <div class="sponsor-options-cell" data-label="Option">Workshop</div>
-                    <div class="sponsor-options-cell cost-cell" data-label="Cost">$2,500</div>
-                    <div class="sponsor-options-cell" data-label="Duration">1 hr+</div>
-                    <div class="sponsor-options-cell sponsor-options-checkmark" data-label="Food">✓</div>
+                <div class="sponsor-options-cell cost-cell" data-label="Cost">
+                  $1,000
                 </div>
+              </div>
             </div>
+          </div>
         </div>
         <p></p>
-        <p> *Chat - connect with students right after Thursday meetings <br> *Workshop - partner event for your company to directly present, engage, & recruit</p>
-        <p></p>
         <div class="sponsor-options-wrapper">
-            <div class="sponsor-table">
-                <div class="sponsor-options-title">Itemized Options</div>
-                <div class="sponsor-options-table">
-                    <div class="sponsor-options-row sponsor-options-header">
-                        <div class="sponsor-options-cell">Option</div>
-                        <div class="sponsor-options-cell">Cost</div>
-                    </div>
-
-                    <div class="sponsor-options-row">
-                        <div class="sponsor-options-cell" data-label="Option">Resume Book of Students</div>
-                        <div class="sponsor-options-cell cost-cell" data-label="Cost">$500</div>
-                    </div>
-
-                    <div class="sponsor-options-row">
-                        <div class="sponsor-options-cell" data-label="Option">Active Recruiting Info Distribution</div>
-                        <div class="sponsor-options-cell cost-cell" data-label="Cost">$1,000</div>
-                    </div>
-                </div>
+          <div class="sponsor-table">
+            <div class="sponsor-options-title">Club Sponsor</div>
+            <div class="club-sponsor-description">
+              <strong>Cost: $1,500</strong><br /><br />
+              • Logo Featured on T-Shirt<br />
+              • 25% off Workshop & CTF Sponsorship Packages<br />
+              • Resume Book of Competitors & Organizers<br />
+              • Website Placements & Social Media Shoutouts
             </div>
-        </div>
-       <p></p>
-        <div class="sponsor-options-wrapper">
-            <div class="sponsor-table">
-                <div class="sponsor-options-title">Club Sponsor</div>
-                <div class="club-sponsor-description">
-                    <strong>Cost: $1,500</strong><br><br>
-                    • Logo Featured on T-Shirt<br>
-                    • 25% off Workshop & CTF Sponsorship Packages<br>
-                    • Resume Book of Competitors & Organizers<br>
-                    • Website Placements & Social Media Shoutouts
-                </div>
-            </div>
+          </div>
         </div>
 
         <p></p>
 
         <div class="sponsor-options-wrapper">
-            <div class="sponsor-table">
-                <div class="sponsor-options-title">WreckCTF 2025</div>
+          <div class="sponsor-table">
+            <div class="sponsor-options-title">WreckCTF 2025</div>
 
-                <div class="sponsor-options-row sponsor-options-header ctf-tiers">
-                    <div class="sponsor-options-cell">Wreck CTF Sponsor Tiers</div>
-                    <div class="sponsor-options-cell tier-cell">Tier 1</div>
-                    <div class="sponsor-options-cell tier-cell">Tier 2</div>
-                </div>
-
-                <div class="sponsor-options-row ctf-tiers">
-                    <div class="sponsor-options-cell" data-label="Feature">Cost</div>
-                    <div class="sponsor-options-cell cost-cell" data-label="Tier 1">$1,000</div>
-                    <div class="sponsor-options-cell cost-cell" data-label="Tier 2">$3,000</div>
-                </div>
-
-                <div class="sponsor-options-row ctf-tiers">
-                    <div class="sponsor-options-cell" data-label="Feature">Website Placements & Social Media Shoutouts</div>
-                    <div class="sponsor-options-cell sponsor-options-checkmark" data-label="Tier 1">✓</div>
-                    <div class="sponsor-options-cell sponsor-options-checkmark" data-label="Tier 2">✓</div>
-                </div>
-
-                <div class="sponsor-options-row ctf-tiers">
-                    <div class="sponsor-options-cell" data-label="Feature">Logo Featured on T-Shirt</div>
-                    <div class="sponsor-options-cell" data-label="Tier 1">—</div>
-                    <div class="sponsor-options-cell sponsor-options-checkmark" data-label="Tier 2">✓</div>
-                </div>
-
-                <div class="sponsor-options-row ctf-tiers">
-                    <div class="sponsor-options-cell" data-label="Feature">Resume Book of Competitors & Organizers</div>
-                    <div class="sponsor-options-cell" data-label="Tier 1">—</div>
-                    <div class="sponsor-options-cell sponsor-options-checkmark" data-label="Tier 2">✓</div>
-                </div>
+            <div class="sponsor-options-row sponsor-options-header ctf-tiers">
+              <div class="sponsor-options-cell">Wreck CTF Sponsor Tiers</div>
+              <div class="sponsor-options-cell tier-cell">Tier 1</div>
+              <div class="sponsor-options-cell tier-cell">Tier 2</div>
             </div>
+
+            <div class="sponsor-options-row ctf-tiers">
+              <div class="sponsor-options-cell" data-label="Feature">Cost</div>
+              <div class="sponsor-options-cell cost-cell" data-label="Tier 1">
+                $1,000
+              </div>
+              <div class="sponsor-options-cell cost-cell" data-label="Tier 2">
+                $3,000
+              </div>
+            </div>
+
+            <div class="sponsor-options-row ctf-tiers">
+              <div class="sponsor-options-cell" data-label="Feature">
+                Website Placements & Social Media Shoutouts
+              </div>
+              <div
+                class="sponsor-options-cell sponsor-options-checkmark"
+                data-label="Tier 1"
+              >
+                ✓
+              </div>
+              <div
+                class="sponsor-options-cell sponsor-options-checkmark"
+                data-label="Tier 2"
+              >
+                ✓
+              </div>
+            </div>
+
+            <div class="sponsor-options-row ctf-tiers">
+              <div class="sponsor-options-cell" data-label="Feature">
+                Logo Featured on T-Shirt
+              </div>
+              <div class="sponsor-options-cell" data-label="Tier 1">—</div>
+              <div
+                class="sponsor-options-cell sponsor-options-checkmark"
+                data-label="Tier 2"
+              >
+                ✓
+              </div>
+            </div>
+
+            <div class="sponsor-options-row ctf-tiers">
+              <div class="sponsor-options-cell" data-label="Feature">
+                Resume Book of Competitors & Organizers
+              </div>
+              <div class="sponsor-options-cell" data-label="Tier 1">—</div>
+              <div
+                class="sponsor-options-cell sponsor-options-checkmark"
+                data-label="Tier 2"
+              >
+                ✓
+              </div>
+            </div>
+          </div>
         </div>
         <div class="sponsor-note">
-            <strong>Note:</strong> Tier 2 includes 50% discount on CTF Itemized Options
+          <strong>Note:</strong> Tier 2 includes 50% discount on CTF Itemized
+          Options
         </div>
         <div class="sponsor-options-wrapper">
-            <div class="sponsor-table">
-                <div class="sponsor-options-title">CTF Itemized Options</div>
-                <div class="sponsor-options-table">
-                    <div class="sponsor-options-row sponsor-options-header">
-                        <div class="sponsor-options-cell">Option</div>
-                        <div class="sponsor-options-cell">Cost</div>
-                    </div>
+          <div class="sponsor-table">
+            <div class="sponsor-options-title">CTF Itemized Options</div>
+            <div class="sponsor-options-table">
+              <div class="sponsor-options-row sponsor-options-header">
+                <div class="sponsor-options-cell">Option</div>
+                <div class="sponsor-options-cell">Cost</div>
+              </div>
 
-                    <div class="sponsor-options-row">
-                        <div class="sponsor-options-cell" data-label="Option">Distribution of Company Recruitment Info during CTF</div>
-                        <div class="sponsor-options-cell cost-cell" data-label="Cost">$1,000</div>
-                    </div>
-
-                    <div class="sponsor-options-row">
-                        <div class="sponsor-options-cell" data-label="Option">Company-sponsored CTF Challenge<br>
-                            <small style="color: #9ca3af; font-size: 14px;">(includes info of members who solved your challenge)</small></div>
-                        <div class="sponsor-options-cell cost-cell" data-label="Cost">$2,000</div>
-                    </div>
+              <div class="sponsor-options-row">
+                <div class="sponsor-options-cell" data-label="Option">
+                  Distribution of Company Recruitment Info during CTF
                 </div>
+                <div class="sponsor-options-cell cost-cell" data-label="Cost">
+                  $1,000
+                </div>
+              </div>
+
+              <div class="sponsor-options-row">
+                <div class="sponsor-options-cell" data-label="Option">
+                  Company-sponsored CTF Challenge<br />
+                  <small style="color: #9ca3af; font-size: 14px"
+                    >(includes info of members who solved your challenge)</small
+                  >
+                </div>
+                <div class="sponsor-options-cell cost-cell" data-label="Cost">
+                  $2,000
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-</section>
+      </div>
+    </section>
 
-<footer id="footer">
-    <p class="small">© Copyright 2025 GreyHat</p>
-    <p class="small">
-        Powered by <a href="https://hexo.io/">Hexo</a> | Theme By <a href="https://github.com/fuzhouxxdong/hexo-theme-dxx">Dxx</a>
-    </p>
-</footer>
+    <footer id="footer">
+      <p class="small">© Copyright 2025 GreyHat</p>
+      <p class="small">
+        Powered by <a href="https://hexo.io/">Hexo</a> | Theme By
+        <a href="https://github.com/fuzhouxxdong/hexo-theme-dxx">Dxx</a>
+      </p>
+    </footer>
 
-<script>
-    // Mobile menu functionality
-    const mobileMenuToggle = document.getElementById('mobile-menu-toggle');
-    const navLinks = document.getElementById('nav-links');
-    const mobileOverlay = document.getElementById('mobile-overlay');
+    <script>
+      // Mobile menu functionality
+      const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
+      const navLinks = document.getElementById("nav-links");
+      const mobileOverlay = document.getElementById("mobile-overlay");
 
-    function toggleMobileMenu() {
-      mobileMenuToggle.classList.toggle('active');
-      navLinks.classList.toggle('active');
-      mobileOverlay.classList.toggle('active');
-    }
-
-    function closeMobileMenu() {
-      mobileMenuToggle.classList.remove('active');
-      navLinks.classList.remove('active');
-      mobileOverlay.classList.remove('active');
-    }
-
-    mobileMenuToggle.addEventListener('click', toggleMobileMenu);
-    mobileOverlay.addEventListener('click', closeMobileMenu);
-
-    // Close menu when clicking on nav links
-    const navLinkElements = navLinks.querySelectorAll('a');
-    navLinkElements.forEach(link => {
-      link.addEventListener('click', closeMobileMenu);
-    });
-
-    // Close menu on escape key
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape') {
-        closeMobileMenu();
+      function toggleMobileMenu() {
+        mobileMenuToggle.classList.toggle("active");
+        navLinks.classList.toggle("active");
+        mobileOverlay.classList.toggle("active");
       }
-    });
 
-    // Updates copyright year
-    const yearSpan = document.getElementById('copyright-year');
-    if (yearSpan) {
+      function closeMobileMenu() {
+        mobileMenuToggle.classList.remove("active");
+        navLinks.classList.remove("active");
+        mobileOverlay.classList.remove("active");
+      }
+
+      mobileMenuToggle.addEventListener("click", toggleMobileMenu);
+      mobileOverlay.addEventListener("click", closeMobileMenu);
+
+      // Close menu when clicking on nav links
+      const navLinkElements = navLinks.querySelectorAll("a");
+      navLinkElements.forEach((link) => {
+        link.addEventListener("click", closeMobileMenu);
+      });
+
+      // Close menu on escape key
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          closeMobileMenu();
+        }
+      });
+
+      // Updates copyright year
+      const yearSpan = document.getElementById("copyright-year");
+      if (yearSpan) {
         yearSpan.textContent = new Date().getFullYear();
-    }
-</script>
-</body>
+      }
+    </script>
+  </body>
 </html>
-
