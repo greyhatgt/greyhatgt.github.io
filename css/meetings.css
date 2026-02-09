@@ -189,9 +189,10 @@
 }
 
 .subscribe-icon {
-    font-size: 18px;
-    font-weight: 800;
-    line-height: 1;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+    display: block;
 }
 
 .calendar-embed-wrapper {
