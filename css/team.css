@@ -168,6 +168,23 @@
     content: "EP";
 }
 
+/* Specific avatar for Alex with pastel blue background and white AM */
+.avatar.alex {
+    background-color: #87CEEB;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    border: 0;
+}
+
+.avatar.alex::before {
+    content: "AM";
+}
+
 /* Specific avatar for TangWei with pastel blue background and white TW */
 .avatar.tangwei {
     background-color: #87CEEB;
