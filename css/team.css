@@ -286,6 +286,24 @@
     border: 0;
 }
 
+/* Specific avatar image for Allistair */
+.avatar.allistair {
+    background-image: url('../images/AllistairHakim.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0;
+}
+
+/* Specific avatar image for Daniel */
+.avatar.daniel {
+    background-image: url('../images/danielamoreno.ico');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0;
+}
+
 .role-badge {
     display: inline-block;
     padding: 4px 10px;
