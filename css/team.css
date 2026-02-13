@@ -287,7 +287,7 @@
 }
 
 /* Specific avatar image for Allistair */
-.avatar.txaber {
+.avatar.allistair {
     background-image: url('../images/AllistairHakim.png');
     background-size: cover;
     background-position: center;
@@ -296,7 +296,7 @@
 }
 
 /* Specific avatar image for Daniel */
-.avatar.txaber {
+.avatar.daniel {
     background-image: url('../images/danielamoreno.ico');
     background-size: cover;
     background-position: center;
