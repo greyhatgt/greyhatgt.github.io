@@ -85,128 +85,8 @@
     </footer>
 
     <script>
-      const RECORDINGS = [
-        {
-          id: "VrpXz9gKaOY",
-          title: "Elections & Election Security Talk",
-          semester: "Spring 2026",
-          tags: ["General Meeting"],
-          date: "2026-02-06",
-        },
-        {
-          id: "dG5ClWYP9_w",
-          title: "Intro to Web Exploitation",
-          semester: "Spring 2026",
-          tags: ["CTF Meeting"],
-          date: "2026-02-03",
-        },
-        {
-          id: "T32M8W2wr-Q",
-          title: "Hacker Jeopardy",
-          semester: "Spring 2026",
-          tags: ["General Meeting"],
-          date: "2026-01-29",
-        },
-        {
-          id: "ecRBhXiXrJw",
-          title: "Intro to CTF, Terminal Basics",
-          semester: "Spring 2026",
-          tags: ["CTF Meeting"],
-          date: "2026-01-27",
-        },
-        {
-          id: "gksfzOPK2lk",
-          title: "MEGA - Metadata Vulnerability | Lightning Talk by Aditya Jha",
-          semester: "Fall 2025",
-          tags: ["Lightning Talk"],
-          date: "2025-11-20",
-        },
-        {
-          id: "brT8ii0XSUA",
-          title: "Intro to Bug Bounties | Lightning Talk by Allistair Hakim",
-          semester: "Fall 2025",
-          tags: ["Lightning Talk"],
-          date: "2025-11-20",
-        },
-        {
-          id: "7ymIJi9fqB0",
-          title:
-            "XMR Mining: How to Mine Cryptocurrency Like Your Favorite APT | Lightning Talk by Darshan Singh",
-          semester: "Fall 2025",
-          tags: ["Lightning Talk"],
-          date: "2025-11-20",
-        },
-        {
-          id: "Fl4Up-eOxr8",
-          title: "Kerberos - Lightning Talk by Mohammad Adain",
-          semester: "Fall 2025",
-          tags: ["Lightning Talk"],
-          date: "2025-11-13",
-        },
-        {
-          id: "eD1qgAF9fKA",
-          title: "Defining Cybersecurity - Lightning Talk by Daniel Moreno",
-          semester: "Fall 2025",
-          tags: ["Lightning Talk"],
-          date: "2025-11-13",
-        },
-        {
-          id: "Lq4pojDMJmE",
-          title: "Physical Security: Doors",
-          semester: "Fall 2025",
-          tags: ["General Meeting"],
-          date: "2025-09-25",
-        },
-        {
-          id: "4PpH_OhlZG8",
-          title: "LockBit Ransomware Gang and Downfall",
-          semester: "Fall 2025",
-          tags: ["General Meeting"],
-          date: "2025-09-05",
-        },
-        {
-          id: "yaj0twAEBRA",
-          title: "s1ngularity NX Supply Chain Attack",
-          semester: "Fall 2025",
-          tags: ["General Meeting"],
-          date: "2025-08-29",
-        },
-        {
-          id: "ZiSkSfS7NSI",
-          title: "Intro to CTF & Setup",
-          semester: "Fall 2025",
-          tags: ["CTF Meeting"],
-          date: "2025-08-26",
-        },
-        {
-          id: "TqEX0Yd6Mgo",
-          title: "Intro to Web",
-          semester: "Fall 2025",
-          tags: ["CTF Meeting"],
-          date: "2025-08-26",
-        },
-        {
-          id: "8kz5Wh3zE6Y",
-          title: "Intro to GreyHat",
-          semester: "Fall 2025",
-          tags: ["General Meeting"],
-          date: "2025-08-21",
-        },
-        {
-          id: "ulAtdRV5Bis",
-          title: "Injection Attacks",
-          semester: "Fall 2025",
-          tags: ["CTF Meeting"],
-          date: "2025-09-10",
-        },
-        {
-          id: "LxIdHkxM3hA",
-          title: "XSS",
-          semester: "Fall 2025",
-          tags: ["CTF Meeting"],
-          date: "2025-09-16",
-        },
-      ];
+      const RECORDINGS_DATA_URL = "./recordings.json";
+      let RECORDINGS = [];
 
       // Filtering & Rendering Logic
       let currentSemester = "all";
@@ -350,8 +230,27 @@
         }
       });
 
-      // Initial render
-      renderRecordings();
+      // Load recordings from JSON, then render
+      const grid = document.getElementById("recordings-grid");
+      const noResults = document.getElementById("no-results");
+
+      grid.innerHTML = '<p class="recordings-loading">Loading recordings…</p>';
+
+      fetch(RECORDINGS_DATA_URL)
+        .then((res) => {
+          if (!res.ok) throw new Error(res.statusText);
+          return res.json();
+        })
+        .then((data) => {
+          RECORDINGS = Array.isArray(data) ? data : [];
+          grid.innerHTML = "";
+          renderRecordings();
+        })
+        .catch(() => {
+          grid.innerHTML =
+            '<p class="recordings-error">Could not load recordings. Check the data URL or try again later.</p>';
+          noResults.style.display = "none";
+        });
 
       // Mobile Menu
       const mobileMenuToggle = document.getElementById("mobile-menu-toggle");
