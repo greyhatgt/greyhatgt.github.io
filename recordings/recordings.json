@@ -1,389 +1,398 @@
 [
-    {
-        "id": "4VtCWl22YaE",
-        "title": "Overview of SSH, Nmap, Paros, SET and Wireshark - GreyH@t Admins - 2013-1-15",
-        "semester": "Spring 2013",
-        "date": "2013-01-25",
-        "tags": [
-            "Presentation"
-        ]
-    },
-    {
-        "id": "4i9UORnVLeo",
-        "title": "Using WPScan, DVWA Walkthrough - Eric Zhang, Chris Grayson - 2013-1-22",
-        "semester": "Spring 2013",
-        "date": "2013-01-25",
-        "tags": [
-            "Presentation"
-        ]
-    },
-    {
-        "id": "6YNhcvjEUMg",
-        "title": "Tunneling and Key Management with SSH - Nick Johnson - 2013-1-29",
-        "semester": "Spring 2013",
-        "date": "2013-01-31",
-        "tags": [
-            "Presentation"
-        ]
-    },
-    {
-        "id": "dpRd9aBJlHw",
-        "title": "Introducing GreyH@t at Georgia Tech - Chris Grayson - 2012-8-22",
-        "semester": "Spring 2013",
-        "date": "2013-02-01",
-        "tags": [
-            "General Meeting"
-        ]
-    },
-    {
-        "id": "E7SLMN_8mNk",
-        "title": "Advanced XSS - Robert Grosse - 2013-2-5",
-        "semester": "Spring 2013",
-        "date": "2013-02-22",
-        "tags": [
-            "Presentation"
-        ]
-    },
-    {
-        "id": "tOkcaxsymI0",
-        "title": "Nmap - Alex Bires - 2013-3-5",
-        "semester": "Spring 2013",
-        "date": "2013-03-07",
-        "tags": [
-            "Presentation"
-        ]
-    },
-    {
-        "id": "oLRt0BTYja4",
-        "title": "DNS Cache Poisoning - Chris Grayson - 2013-2-26",
-        "semester": "Spring 2013",
-        "date": "2013-03-08",
-        "tags": [
-            "Presentation"
-        ]
-    },
-    {
-        "id": "yJneMblvFz0",
-        "title": "Defending at the iCTF - Chris Grayson - 2013-4-2",
-        "semester": "Spring 2013",
-        "date": "2013-04-15",
-        "tags": [
-            "Presentation"
-        ]
-    },
-    {
-        "id": "GMCCHY8Mzfo",
-        "title": "Installing Kali Linux on VirtualBox",
-        "semester": "Spring 2017",
-        "date": "2017-01-28",
-        "tags": [
-            "Presentation"
-        ]
-    },
-    {
-        "id": "olzyz8R5LTg",
-        "title": "Introduction to Metasploit",
-        "semester": "Spring 2017",
-        "date": "2017-03-09",
-        "tags": [
-            "Presentation"
-        ]
-    },
-    {
-        "id": "dMmsPwkSqOc",
-        "title": "Introduction to Software Fuzzing",
-        "semester": "Spring 2017",
-        "date": "2017-03-10",
-        "tags": [
-            "Presentation"
-        ]
-    },
-    {
-        "id": "Uks8UDiI3Ss",
-        "title": "Tor and VPNs",
-        "semester": "Spring 2017",
-        "date": "2017-04-30",
-        "tags": [
-            "Presentation"
-        ]
-    },
-    {
-        "id": "WAzgHzlfEDs",
-        "title": "Intro to Penetration Testing using Burp Suite",
-        "semester": "Spring 2017",
-        "date": "2017-05-09",
-        "tags": [
-            "Presentation"
-        ]
-    },
-    {
-        "id": "JbzfJGpMmoU",
-        "title": "Intro to CTF and Binexp Environment Setup | GreyHatGT S25 Week 1 CTF Meeting",
-        "semester": "Spring 2025",
-        "date": "2025-01-15",
-        "tags": [
-            "CTF Meeting"
-        ]
-    },
-    {
-        "id": "bkSy3ku5Z8U",
-        "title": "Intro to Reverse Engineering | GreyHatGT S25 Week 2 CTF Meeting",
-        "semester": "Spring 2025",
-        "date": "2025-01-29",
-        "tags": [
-            "CTF Meeting"
-        ]
-    },
-    {
-        "id": "2QLsA0Wooo8",
-        "title": "Bambu Labs Hack | GreyHatGT S25 Week 2 General Meeting",
-        "semester": "Spring 2025",
-        "date": "2025-01-29",
-        "tags": [
-            "General Meeting"
-        ]
-    },
-    {
-        "id": "4hcQmbLGmhk",
-        "title": "Welcome to GreyHat! | GreyHatGT S25 Week 1 General Meeting",
-        "semester": "Spring 2025",
-        "date": "2025-01-29",
-        "tags": [
-            "General Meeting"
-        ]
-    },
-    {
-        "id": "8rWsOmRSGLk",
-        "title": "Crash Course Debuggers | GreyHatGT S25 Week 3 CTF Meeting",
-        "semester": "Spring 2025",
-        "date": "2025-02-05",
-        "tags": [
-            "CTF Meeting"
-        ]
-    },
-    {
-        "id": "8kz5Wh3zE6Y",
-        "title": "Intro to GreyHat | GreyHatGT F25 Week 0 General Meeting",
-        "semester": "Fall 2025",
-        "date": "2025-08-22",
-        "tags": [
-            "General Meeting"
-        ]
-    },
-    {
-        "id": "ZiSkSfS7NSI",
-        "title": "Intro to CTF & Setup | GreyHatGT F25 Week 1 CTF Meeting",
-        "semester": "Fall 2025",
-        "date": "2025-08-27",
-        "tags": [
-            "CTF Meeting"
-        ]
-    },
-    {
-        "id": "yaj0twAEBRA",
-        "title": "s1ngularity NX supply chain attack | GreyHatGT F25 Week 1 General Meeting",
-        "semester": "Fall 2025",
-        "date": "2025-08-29",
-        "tags": [
-            "General Meeting"
-        ]
-    },
-    {
-        "id": "TqEX0Yd6Mgo",
-        "title": "Intro to Web Exploitation | GreyHatGT F25 Week 2 CTF Meeting",
-        "semester": "Fall 2025",
-        "date": "2025-09-03",
-        "tags": [
-            "CTF Meeting"
-        ]
-    },
-    {
-        "id": "4PpH_OhlZG8",
-        "title": "LockBit Ransomware Gang and Downfall | GreyHatGT F25 Week 2 General Meeting",
-        "semester": "Fall 2025",
-        "date": "2025-09-05",
-        "tags": [
-            "General Meeting"
-        ]
-    },
-    {
-        "id": "ulAtdRV5Bis",
-        "title": "Code Injection | GreyHatGT F25 Week 3 CTF Meeting",
-        "semester": "Fall 2025",
-        "date": "2025-09-10",
-        "tags": [
-            "CTF Meeting"
-        ]
-    },
-    {
-        "id": "LxIdHkxM3hA",
-        "title": "XSS | GreyHatGT F25 Week 4 CTF Meeting",
-        "semester": "Fall 2025",
-        "date": "2025-09-17",
-        "tags": [
-            "CTF Meeting"
-        ]
-    },
-    {
-        "id": "Lq4pojDMJmE",
-        "title": "Physical Security: Doors | GreyHatGT F25 Week 5 General Meeting",
-        "semester": "Fall 2025",
-        "date": "2025-09-26",
-        "tags": [
-            "General Meeting"
-        ]
-    },
-    {
-        "id": "eD1qgAF9fKA",
-        "title": "Defining Cybersecurity - Lightning Talks by Daniel Moreno 11/13",
-        "semester": "Fall 2025",
-        "date": "2025-11-15",
-        "tags": [
-            "Lightning Talk"
-        ]
-    },
-    {
-        "id": "Fl4Up-eOxr8",
-        "title": "Kerberos - Lighting Talk by Mohammad Adain 11/13",
-        "semester": "Fall 2025",
-        "date": "2025-11-15",
-        "tags": [
-            "Lightning Talk"
-        ]
-    },
-    {
-        "id": "ecRBhXiXrJw",
-        "title": "Intro to CTF, Terminal Basics | GreyHatGT S26 Week 1 CTF Meeting",
-        "semester": "Spring 2026",
-        "date": "2026-01-28",
-        "tags": [
-            "CTF Meeting"
-        ]
-    },
-    {
-        "id": "7ymIJi9fqB0",
-        "title": "XMR Mining: How to Mine Cryptocurrency Like Your Favorite APT | Lightning Talk by Darshan Singh",
-        "semester": "Spring 2026",
-        "date": "2026-01-29",
-        "tags": [
-            "Lightning Talk"
-       ]
-    },
-    {
-        "id": "brT8ii0XSUA",
-        "title": "Intro to Bug Bounties | Lightning Talk by Allistair Hakim",
-        "semester": "Spring 2026",
-        "date": "2026-01-29",
-        "tags": [
-            "Lightning Talk"
-       ]
-    },
-    {
-        "id": "gksfzOPK2lk",
-        "title": "MEGA - Metadata Vunerability | Lightning Talk by Aditya Jha",
-        "semester": "Spring 2026",
-        "date": "2026-01-29",
-        "tags": [
-            "Lightning Talk"
-       ]
-    },
-    {
-        "id": "T32M8W2wr-Q",
-        "title": "Hacker Jeopardy | GreyHatGT S26 Week 1 General Meeting",
-        "semester": "Spring 2026",
-        "date": "2026-02-06",
-        "tags": [
-            "General Meeting"
-        ]
-    },
-    {
-        "id": "VrpXz9gKaOY",
-        "title": "Elections & Election Security Talk | GreyHatGT S26 Week 2 General Meeting",
-        "semester": "Spring 2026",
-        "date": "2026-02-06",
-        "tags": [
-            "General Meeting"
-        ]
-    },
-    {
-        "id": "dG5ClWYP9_w",
-        "title": "Intro to Web Exploitation | GreyHatGT S26 Week 1 CTF Meeting",
-        "semester": "Spring 2026",
-        "date": "2026-02-06",
-        "tags": [
-            "CTF Meeting"
-        ]
-    },
-    {
-        "id": "DY9afUQ1bjg",
-        "title": "SSLab Presentation for LLM CTF Agent | GreyHatGT S26 Week 3",
-        "semester": "Spring 2026",
-        "date": "2026-02-13",
-        "tags": [
-            "Presentation"
-        ]
-    },
-    {
-        "id": "YkSPmkHuVc8",
-        "title": "MaLDAPtive & SkyScalper: Obfuscation Techniques in Modern Atacks with Guest Speaker Daniel Bohannon",
-        "semester": "Spring 2026",
-        "date": "2026-02-14",
-        "tags": [
-            "Presentation"
-        ]
-    },
-    {
-        "id": "BQMJ5Isf12c",
-        "title": "XSS Attacks and More Web Fundamentals | GreyHatGT S26 Week 3 CTF Meeting",
-        "semester": "Spring 2026",
-        "date": "2026-02-14",
-        "tags": [
-            "CTF Meeting"
-        ]
-    },
-    {
-        "id": "d0nMvAZqmeo",
-        "title": "Intro to Rev | GreyHatGT S26 Week 4 CTF Meeting",
-        "semester": "Spring 2026",
-        "date": "2026-02-23",
-        "tags": [
-            "CTF Meeting"
-        ]
-    },
-    {
-        "id": "SsAwJOxYhB8",
-        "title": "Notepad++ Supply Chain Attack Investigation (Guest Speaker: Validin) | GreyHatGT S26 Week 4 General",
-        "semester": "Spring 2026",
-        "date": "2026-02-23",
-        "tags": [
-            "General Meeting"
-        ]
-    },
-    {
-        "id": "PDnR6ozEnrk",
-        "title": "Pyjails | GreyHatGT S26 Week 5 CTF Meeting",
-        "semester": "Spring 2026",
-        "date": "2026-02-26",
-        "tags": [
-            "CTF Meeting"
-        ]
-    },
-    {
-        "id": "84fN74nB-MA",
-        "title": "AirSnitch | GreyHatGT S26 Week 5 General Meeting",
-        "semester": "Spring 2026",
-        "date": "2026-03-02",
-        "tags": [
-            "General Meeting"
-        ]
-    },
-    {
-        "id": "ogr0xTkBThQ",
-        "title": "ELF, Assembly | GreyHatGT S26 Week 6 CTF Meeting",
-        "semester": "Spring 2026",
-        "date": "2026-03-04",
-        "tags": [
-            "CTF Meeting"
-        ]
-    }
+  {
+    "id": "iK0YfPAmpgU",
+    "title": "LLM CTF Recap | GreyHatGT S26 Week 6 General Meeting",
+    "semester": "Spring 2026",
+    "tags": [
+      "General Meeting"
+    ],
+    "date": "2026-03-05"
+  },
+  {
+    "id": "4VtCWl22YaE",
+    "title": "Overview of SSH, Nmap, Paros, SET and Wireshark - GreyH@t Admins - 2013-1-15",
+    "semester": "Spring 2013",
+    "date": "2013-01-25",
+    "tags": [
+      "Presentation"
+    ]
+  },
+  {
+    "id": "4i9UORnVLeo",
+    "title": "Using WPScan, DVWA Walkthrough - Eric Zhang, Chris Grayson - 2013-1-22",
+    "semester": "Spring 2013",
+    "date": "2013-01-25",
+    "tags": [
+      "Presentation"
+    ]
+  },
+  {
+    "id": "6YNhcvjEUMg",
+    "title": "Tunneling and Key Management with SSH - Nick Johnson - 2013-1-29",
+    "semester": "Spring 2013",
+    "date": "2013-01-31",
+    "tags": [
+      "Presentation"
+    ]
+  },
+  {
+    "id": "dpRd9aBJlHw",
+    "title": "Introducing GreyH@t at Georgia Tech - Chris Grayson - 2012-8-22",
+    "semester": "Spring 2013",
+    "date": "2013-02-01",
+    "tags": [
+      "General Meeting"
+    ]
+  },
+  {
+    "id": "E7SLMN_8mNk",
+    "title": "Advanced XSS - Robert Grosse - 2013-2-5",
+    "semester": "Spring 2013",
+    "date": "2013-02-22",
+    "tags": [
+      "Presentation"
+    ]
+  },
+  {
+    "id": "tOkcaxsymI0",
+    "title": "Nmap - Alex Bires - 2013-3-5",
+    "semester": "Spring 2013",
+    "date": "2013-03-07",
+    "tags": [
+      "Presentation"
+    ]
+  },
+  {
+    "id": "oLRt0BTYja4",
+    "title": "DNS Cache Poisoning - Chris Grayson - 2013-2-26",
+    "semester": "Spring 2013",
+    "date": "2013-03-08",
+    "tags": [
+      "Presentation"
+    ]
+  },
+  {
+    "id": "yJneMblvFz0",
+    "title": "Defending at the iCTF - Chris Grayson - 2013-4-2",
+    "semester": "Spring 2013",
+    "date": "2013-04-15",
+    "tags": [
+      "Presentation"
+    ]
+  },
+  {
+    "id": "GMCCHY8Mzfo",
+    "title": "Installing Kali Linux on VirtualBox",
+    "semester": "Spring 2017",
+    "date": "2017-01-28",
+    "tags": [
+      "Presentation"
+    ]
+  },
+  {
+    "id": "olzyz8R5LTg",
+    "title": "Introduction to Metasploit",
+    "semester": "Spring 2017",
+    "date": "2017-03-09",
+    "tags": [
+      "Presentation"
+    ]
+  },
+  {
+    "id": "dMmsPwkSqOc",
+    "title": "Introduction to Software Fuzzing",
+    "semester": "Spring 2017",
+    "date": "2017-03-10",
+    "tags": [
+      "Presentation"
+    ]
+  },
+  {
+    "id": "Uks8UDiI3Ss",
+    "title": "Tor and VPNs",
+    "semester": "Spring 2017",
+    "date": "2017-04-30",
+    "tags": [
+      "Presentation"
+    ]
+  },
+  {
+    "id": "WAzgHzlfEDs",
+    "title": "Intro to Penetration Testing using Burp Suite",
+    "semester": "Spring 2017",
+    "date": "2017-05-09",
+    "tags": [
+      "Presentation"
+    ]
+  },
+  {
+    "id": "JbzfJGpMmoU",
+    "title": "Intro to CTF and Binexp Environment Setup | GreyHatGT S25 Week 1 CTF Meeting",
+    "semester": "Spring 2025",
+    "date": "2025-01-15",
+    "tags": [
+      "CTF Meeting"
+    ]
+  },
+  {
+    "id": "bkSy3ku5Z8U",
+    "title": "Intro to Reverse Engineering | GreyHatGT S25 Week 2 CTF Meeting",
+    "semester": "Spring 2025",
+    "date": "2025-01-29",
+    "tags": [
+      "CTF Meeting"
+    ]
+  },
+  {
+    "id": "2QLsA0Wooo8",
+    "title": "Bambu Labs Hack | GreyHatGT S25 Week 2 General Meeting",
+    "semester": "Spring 2025",
+    "date": "2025-01-29",
+    "tags": [
+      "General Meeting"
+    ]
+  },
+  {
+    "id": "4hcQmbLGmhk",
+    "title": "Welcome to GreyHat! | GreyHatGT S25 Week 1 General Meeting",
+    "semester": "Spring 2025",
+    "date": "2025-01-29",
+    "tags": [
+      "General Meeting"
+    ]
+  },
+  {
+    "id": "8rWsOmRSGLk",
+    "title": "Crash Course Debuggers | GreyHatGT S25 Week 3 CTF Meeting",
+    "semester": "Spring 2025",
+    "date": "2025-02-05",
+    "tags": [
+      "CTF Meeting"
+    ]
+  },
+  {
+    "id": "8kz5Wh3zE6Y",
+    "title": "Intro to GreyHat | GreyHatGT F25 Week 0 General Meeting",
+    "semester": "Fall 2025",
+    "date": "2025-08-22",
+    "tags": [
+      "General Meeting"
+    ]
+  },
+  {
+    "id": "ZiSkSfS7NSI",
+    "title": "Intro to CTF & Setup | GreyHatGT F25 Week 1 CTF Meeting",
+    "semester": "Fall 2025",
+    "date": "2025-08-27",
+    "tags": [
+      "CTF Meeting"
+    ]
+  },
+  {
+    "id": "yaj0twAEBRA",
+    "title": "s1ngularity NX supply chain attack | GreyHatGT F25 Week 1 General Meeting",
+    "semester": "Fall 2025",
+    "date": "2025-08-29",
+    "tags": [
+      "General Meeting"
+    ]
+  },
+  {
+    "id": "TqEX0Yd6Mgo",
+    "title": "Intro to Web Exploitation | GreyHatGT F25 Week 2 CTF Meeting",
+    "semester": "Fall 2025",
+    "date": "2025-09-03",
+    "tags": [
+      "CTF Meeting"
+    ]
+  },
+  {
+    "id": "4PpH_OhlZG8",
+    "title": "LockBit Ransomware Gang and Downfall | GreyHatGT F25 Week 2 General Meeting",
+    "semester": "Fall 2025",
+    "date": "2025-09-05",
+    "tags": [
+      "General Meeting"
+    ]
+  },
+  {
+    "id": "ulAtdRV5Bis",
+    "title": "Code Injection | GreyHatGT F25 Week 3 CTF Meeting",
+    "semester": "Fall 2025",
+    "date": "2025-09-10",
+    "tags": [
+      "CTF Meeting"
+    ]
+  },
+  {
+    "id": "LxIdHkxM3hA",
+    "title": "XSS | GreyHatGT F25 Week 4 CTF Meeting",
+    "semester": "Fall 2025",
+    "date": "2025-09-17",
+    "tags": [
+      "CTF Meeting"
+    ]
+  },
+  {
+    "id": "Lq4pojDMJmE",
+    "title": "Physical Security: Doors | GreyHatGT F25 Week 5 General Meeting",
+    "semester": "Fall 2025",
+    "date": "2025-09-26",
+    "tags": [
+      "General Meeting"
+    ]
+  },
+  {
+    "id": "eD1qgAF9fKA",
+    "title": "Defining Cybersecurity - Lightning Talks by Daniel Moreno 11/13",
+    "semester": "Fall 2025",
+    "date": "2025-11-15",
+    "tags": [
+      "Lightning Talk"
+    ]
+  },
+  {
+    "id": "Fl4Up-eOxr8",
+    "title": "Kerberos - Lighting Talk by Mohammad Adain 11/13",
+    "semester": "Fall 2025",
+    "date": "2025-11-15",
+    "tags": [
+      "Lightning Talk"
+    ]
+  },
+  {
+    "id": "ecRBhXiXrJw",
+    "title": "Intro to CTF, Terminal Basics | GreyHatGT S26 Week 1 CTF Meeting",
+    "semester": "Spring 2026",
+    "date": "2026-01-28",
+    "tags": [
+      "CTF Meeting"
+    ]
+  },
+  {
+    "id": "7ymIJi9fqB0",
+    "title": "XMR Mining: How to Mine Cryptocurrency Like Your Favorite APT | Lightning Talk by Darshan Singh",
+    "semester": "Spring 2026",
+    "date": "2026-01-29",
+    "tags": [
+      "Lightning Talk"
+    ]
+  },
+  {
+    "id": "brT8ii0XSUA",
+    "title": "Intro to Bug Bounties | Lightning Talk by Allistair Hakim",
+    "semester": "Spring 2026",
+    "date": "2026-01-29",
+    "tags": [
+      "Lightning Talk"
+    ]
+  },
+  {
+    "id": "gksfzOPK2lk",
+    "title": "MEGA - Metadata Vunerability | Lightning Talk by Aditya Jha",
+    "semester": "Spring 2026",
+    "date": "2026-01-29",
+    "tags": [
+      "Lightning Talk"
+    ]
+  },
+  {
+    "id": "T32M8W2wr-Q",
+    "title": "Hacker Jeopardy | GreyHatGT S26 Week 1 General Meeting",
+    "semester": "Spring 2026",
+    "date": "2026-02-06",
+    "tags": [
+      "General Meeting"
+    ]
+  },
+  {
+    "id": "VrpXz9gKaOY",
+    "title": "Elections & Election Security Talk | GreyHatGT S26 Week 2 General Meeting",
+    "semester": "Spring 2026",
+    "date": "2026-02-06",
+    "tags": [
+      "General Meeting"
+    ]
+  },
+  {
+    "id": "dG5ClWYP9_w",
+    "title": "Intro to Web Exploitation | GreyHatGT S26 Week 1 CTF Meeting",
+    "semester": "Spring 2026",
+    "date": "2026-02-06",
+    "tags": [
+      "CTF Meeting"
+    ]
+  },
+  {
+    "id": "DY9afUQ1bjg",
+    "title": "SSLab Presentation for LLM CTF Agent | GreyHatGT S26 Week 3",
+    "semester": "Spring 2026",
+    "date": "2026-02-13",
+    "tags": [
+      "Presentation"
+    ]
+  },
+  {
+    "id": "YkSPmkHuVc8",
+    "title": "MaLDAPtive & SkyScalper: Obfuscation Techniques in Modern Atacks with Guest Speaker Daniel Bohannon",
+    "semester": "Spring 2026",
+    "date": "2026-02-14",
+    "tags": [
+      "Presentation"
+    ]
+  },
+  {
+    "id": "BQMJ5Isf12c",
+    "title": "XSS Attacks and More Web Fundamentals | GreyHatGT S26 Week 3 CTF Meeting",
+    "semester": "Spring 2026",
+    "date": "2026-02-14",
+    "tags": [
+      "CTF Meeting"
+    ]
+  },
+  {
+    "id": "d0nMvAZqmeo",
+    "title": "Intro to Rev | GreyHatGT S26 Week 4 CTF Meeting",
+    "semester": "Spring 2026",
+    "date": "2026-02-23",
+    "tags": [
+      "CTF Meeting"
+    ]
+  },
+  {
+    "id": "SsAwJOxYhB8",
+    "title": "Notepad++ Supply Chain Attack Investigation (Guest Speaker: Validin) | GreyHatGT S26 Week 4 General",
+    "semester": "Spring 2026",
+    "date": "2026-02-23",
+    "tags": [
+      "General Meeting"
+    ]
+  },
+  {
+    "id": "PDnR6ozEnrk",
+    "title": "Pyjails | GreyHatGT S26 Week 5 CTF Meeting",
+    "semester": "Spring 2026",
+    "date": "2026-02-26",
+    "tags": [
+      "CTF Meeting"
+    ]
+  },
+  {
+    "id": "84fN74nB-MA",
+    "title": "AirSnitch | GreyHatGT S26 Week 5 General Meeting",
+    "semester": "Spring 2026",
+    "date": "2026-03-02",
+    "tags": [
+      "General Meeting"
+    ]
+  },
+  {
+    "id": "ogr0xTkBThQ",
+    "title": "ELF, Assembly | GreyHatGT S26 Week 6 CTF Meeting",
+    "semester": "Spring 2026",
+    "date": "2026-03-04",
+    "tags": [
+      "CTF Meeting"
+    ]
+  }
 ]
