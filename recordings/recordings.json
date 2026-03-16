@@ -1,5 +1,23 @@
 [
   {
+    "id": "RgBojzW-BKg",
+    "title": "We have Netflix at Home | GreyHatGT S26 Week 7 Lightning Talk",
+    "semester": "Spring 2026",
+    "tags": [
+      "Lightning Talk"
+    ],
+    "date": "2026-03-12"
+  },
+  {
+    "id": "g26u6JtViD4",
+    "title": "Side Channel Attacks | GreyHatGT S26 Week 7 General Meeting",
+    "semester": "Spring 2026",
+    "tags": [
+      "General Meeting"
+    ],
+    "date": "2026-03-12"
+  },
+  {
     "id": "i5OEcw7KcHs",
     "title": "HTTP Deep Dive | GreyHatGT S26 Week 7 CTF Meeting",
     "semester": "Spring 2026",
