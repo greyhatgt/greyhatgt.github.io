@@ -1,5 +1,14 @@
 [
   {
+    "id": "g2-9OQ0FHyo",
+    "title": "Social Engineering | GreyHatGT S26 Week 10 General Meeting",
+    "semester": "Spring 2026",
+    "tags": [
+      "General Meeting"
+    ],
+    "date": "2026-04-02"
+  },
+  {
     "id": "phKhbsVfCNc",
     "title": "SSTI (Server Side Template Injection) | GreyHatGT S26 Week 10 CTF Meeting",
     "semester": "Spring 2026",
