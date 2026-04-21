@@ -1,5 +1,14 @@
 [
   {
+    "id": "phKhbsVfCNc",
+    "title": "SSTI (Server Side Template Injection) | GreyHatGT S26 Week 10 CTF Meeting",
+    "semester": "Spring 2026",
+    "tags": [
+      "CTF Meeting"
+    ],
+    "date": "2026-03-31"
+  },
+  {
     "id": "g40TwveMd9A",
     "title": "Rev Review, Pwndbg | GreyHatGT S26 Week 8 CTF Meeting",
     "semester": "Spring 2026",
