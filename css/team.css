@@ -117,9 +117,25 @@
     border: 0;
 }
 
+/* Specific avatar image for Jayden */
+.avatar.jayden {
+    background-image: url('../images/JaydenRichmond.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0;
+}
+
+/* Specific avatar image for Wei */
+.avatar.wei {
+    background-image: url('../images/WeiWang.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0;
+}
+
 /* Initials avatars for officers without profile images */
-.avatar.jayden,
-.avatar.wei,
 .avatar.jason,
 .avatar.sean,
 .avatar.carter {
@@ -132,14 +148,6 @@
     font-weight: bold;
     font-family: Arial, sans-serif;
     border: 0;
-}
-
-.avatar.jayden::before {
-    content: "JR";
-}
-
-.avatar.wei::before {
-    content: "WW";
 }
 
 .avatar.jason::before {
