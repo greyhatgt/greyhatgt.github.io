@@ -64,15 +64,6 @@
     border: 2px dashed #333;
 }
 
-/* Specific avatar image for Saketh */
-.avatar.saketh {
-    background-image: url('../images/sakethCrop.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    border: 0;
-}
-
 /* Specific avatar image for Teja */
 .avatar.teja {
     background-image: url('../images/TejaCrop.png');
@@ -117,8 +108,10 @@
     border: 0;
 }
 
-/* Specific avatar for Sean with pastel blue background and white SS */
-.avatar.sean {
+/* Initials avatars for officers without profile images */
+.avatar.jayden,
+.avatar.wei,
+.avatar.jason {
     background-color: #87CEEB;
     color: white;
     display: flex;
@@ -130,8 +123,16 @@
     border: 0;
 }
 
-.avatar.sean::before {
-    content: "SS";
+.avatar.jayden::before {
+    content: "JR";
+}
+
+.avatar.wei::before {
+    content: "WW";
+}
+
+.avatar.jason::before {
+    content: "JO";
 }
 
 /* Specific avatar for Darshan with pastel blue background and white DS */
@@ -168,23 +169,6 @@
     content: "EP";
 }
 
-/* Specific avatar for Alex with pastel blue background and white AM */
-.avatar.alex {
-    background-color: #87CEEB;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 36px;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-    border: 0;
-}
-
-.avatar.alex::before {
-    content: "AM";
-}
-
 /* Specific avatar for Yashila */
 .avatar.yashila {
     background-color: #87CEEB;
@@ -202,24 +186,7 @@
     content: "YR";
 }
 
-/* Specific avatar for TangWei with pastel blue background and white TW */
-.avatar.tangwei {
-    background-color: #87CEEB;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 36px;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-    border: 0;
-}
-
-.avatar.tangwei::before {
-    content: "TW";
-}
-
-/* Specific avatar image for Purvi */
+/* Specific avatar image for Nash */
 .avatar.nash {
     background-image: url('https://nashpillai.com/headshot');
     background-size: cover;
@@ -244,22 +211,6 @@
     background-position: center;
     background-repeat: no-repeat;
     border: 0;
-}
-
-.avatar.carter {
-    background-color: #87CEEB;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 36px;
-    font-weight: bold;
-    font-family: Arial, sans-serif;
-    border: 0;
-}
-
-.avatar.carter::before {
-    content: "CP";
 }
 
 .avatar.micheallo {
