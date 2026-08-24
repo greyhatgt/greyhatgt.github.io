@@ -64,6 +64,15 @@
     border: 2px dashed #333;
 }
 
+/* Specific avatar image for Saketh */
+.avatar.saketh {
+    background-image: url('../images/sakethCrop.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 0;
+}
+
 /* Specific avatar image for Teja */
 .avatar.teja {
     background-image: url('../images/TejaCrop.png');
@@ -111,7 +120,9 @@
 /* Initials avatars for officers without profile images */
 .avatar.jayden,
 .avatar.wei,
-.avatar.jason {
+.avatar.jason,
+.avatar.sean,
+.avatar.carter {
     background-color: #87CEEB;
     color: white;
     display: flex;
@@ -133,6 +144,14 @@
 
 .avatar.jason::before {
     content: "JO";
+}
+
+.avatar.sean::before {
+    content: "SS";
+}
+
+.avatar.carter::before {
+    content: "CP";
 }
 
 /* Specific avatar for Darshan with pastel blue background and white DS */
