@@ -1,51 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://greyhatgt.org/about/index.html</loc>
-    <lastmod>2026-02-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-
-  <url>
-    <loc>https://greyhatgt.org/team/index.html</loc>
-    <lastmod>2026-08-24</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://greyhatgt.org/sponsors/index.html</loc>
-    <lastmod>2026-08-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://greyhatgt.org/recordings/index.html</loc>
-    <lastmod>2026-04-21</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://greyhatgt.org/publications/index.html</loc>
-    <lastmod>2026-08-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://greyhatgt.org/ctf/index.html</loc>
-    <lastmod>2026-08-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  
-  <url>
-    <loc>https://greyhatgt.org/meetings/index.html</loc>
-    <lastmod>2026-08-20</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <url><loc>https://greyhatgt.org/about/</loc></url>
+  <url><loc>https://greyhatgt.org/team/</loc></url>
+  <url><loc>https://greyhatgt.org/meetings/</loc></url>
+  <url><loc>https://greyhatgt.org/recordings/</loc></url>
+  <url><loc>https://greyhatgt.org/sponsors/</loc></url>
+  <url><loc>https://greyhatgt.org/publications/</loc></url>
+  <url><loc>https://greyhatgt.org/ctf/</loc></url>
 </urlset>
